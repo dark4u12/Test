@@ -316,25 +316,86 @@
       <!-- aur FAQs add kar sakte ho -->
 
     </div>
-  </section>
-
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.card').forEach(card => observer.observe(card));
-
-    // FAQ toggle
-    document.querySelectorAll('.faq-question').forEach(q => {
-      q.addEventListener('click', () => {
-        q.parentElement.classList.toggle('active');
-      });
-    });
-  </script>
+  </section
+<section class="section">
+  <h2>What Our Members Say</h2>
+  
+  <div class="testimonial-carousel">
+    <div class="carousel-track">
+      
+      <!-- Slide 1 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <img src="https://thumbs.dreamstime.com/b/smiling-young-indian-man-over-gray-background-people-concept-green-natural-136773167.jpg" alt="Rahul K." class="avatar">
+          <p class="testimonial-text">
+            "Bhai content next level hai! Daily new videos, quality top class. ₹80 mein itna value? Best decision tha premium join karna."
+          </p>
+          <p class="testimonial-author">Rahul K. <span>– 2 months member</span></p>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <img src="https://thumbs.dreamstime.com/b/happy-smiling-indian-arabian-ethnic-male-man-tourist-traveler-businessman-student-guy-having-friendly-talk-conversation-speaking-315653034.jpg" alt="Vikram S." class="avatar">
+          <p class="testimonial-text">
+            "Privacy 100%, bot delivery super fast. Free groups sab bakwas the, yeh real premium feel deta hai. Har hafte fresh maal!"
+          </p>
+          <p class="testimonial-author">Vikram S. <span>– Since launch</span></p>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <img src="https://www.shutterstock.com/shutterstock/photos/2619939871/display_1500/stock-photo-head-shot-portrait-of-happy-indian-businessman-company-head-or-executive-manager-dressed-in-casual-2619939871.jpg" alt="Amit P." class="avatar">
+          <p class="testimonial-text">
+            "No ads, no waiting, massive collection. Monthly plan liya aur regret zero. Sabko recommend kar raha hoon bhai!"
+          </p>
+          <p class="testimonial-author">Amit P. <span>– Happy subscriber</span></p>
+        </div>
+      </div>
+      
+      <!-- Slide 4 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <img src="https://thumbs.dreamstime.com/b/close-up-portrait-young-smiling-indian-woman-denim-shirt-indoors-standing-smiling-camera-close-up-portrait-401219530.jpg" alt="Neha R." class="avatar">
+          <p class="testimonial-text">
+            "80 rupaye monthly mein itna exclusive content? Safe, private aur addictive. Dark4U team – respect! Thank you."
+          </p>
+          <p class="testimonial-author">Neha R. <span>– 3 months member</span></p>
+        </div>
+      </div>
+      
+      <!-- Slide 5 (extra for better loop) -->
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <img src="https://thumbs.dreamstime.com/b/head-shot-portrait-handsome-smiling-young-male-looking-camera-shiny-smile-head-shot-photography-portrait-handsome-smiling-young-357008454.jpg" alt="Sachin M." class="avatar">
+          <p class="testimonial-text">
+            "HD videos har taste ke liye. Bot se direct mil jata hai, no hassle. Worth every paisa – join kar lo!"
+          </p>
+          <p class="testimonial-author">Sachin M. <span>– 1 month member</span></p>
+        </div>
+      </div>
+      
+      <!-- Duplicate first slide for seamless loop -->
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <img src="https://thumbs.dreamstime.com/b/smiling-young-indian-man-over-gray-background-people-concept-green-natural-136773167.jpg" alt="Rahul K." class="avatar">
+          <p class="testimonial-text">
+            "Bhai content next level hai! Daily new videos, quality top class. ₹80 mein itna value? Best decision tha premium join karna."
+          </p>
+          <p class="testimonial-author">Rahul K. <span>– 2 months member</span></p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <button class="carousel-prev">‹</button>
+    <button class="carousel-next">›</button>
+  </div>
+</section>
 
 </body>
 </html>
