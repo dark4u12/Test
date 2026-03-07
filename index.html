@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark4U Premium – Exclusive Content</title>
+  <title>Dark4U Premium – Exclusive Access</title>
   <style>
     :root {
-      --bg: #0a0a0a;
-      --card-bg: rgba(20, 20, 30, 0.6);
+      --bg: #050505;
+      --card-bg: rgba(20, 20, 30, 0.45);
       --text: #f0f0f5;
-      --text-light: #b0b0c5;
+      --text-light: #b0b0c0;
       --accent: #3b82f6;
-      --accent-dark: #2563eb;
       --accent-glow: #60a5fa;
-      --glow: 0 0 20px rgba(59, 130, 246, 0.4);
-      --shadow: 0 10px 30px rgba(0,0,0,0.6);
-      --blur: blur(12px);
+      --neon: #00f0ff;
+      --glow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(0, 240, 255, 0.25);
+      --shadow: 0 12px 40px rgba(0,0,0,0.7);
+      --blur: blur(16px);
     }
 
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -23,71 +23,57 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
     header {
-      padding: 120px 20px 80px;
+      padding: 140px 20px 80px;
       text-align: center;
+      background: linear-gradient(to bottom, #0a0a1f, #050505);
     }
 
     h1 {
-      font-size: clamp(3em, 9vw, 4.8em);
+      font-size: clamp(3.2em, 10vw, 5.2em);
       font-weight: 900;
-      color: var(--accent-glow);
+      letter-spacing: -2px;
+      background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 0.4em;
+      animation: titleGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes titleGlow {
+      0% { text-shadow: 0 0 20px rgba(96,165,250,0.6); }
+      100% { text-shadow: 0 0 40px rgba(165,180,252,0.9); }
     }
 
     .tagline {
-      font-size: clamp(1.5em, 5vw, 2em);
+      font-size: clamp(1.6em, 6vw, 2.2em);
       color: var(--text-light);
       margin-bottom: 1.5em;
+      opacity: 0.9;
     }
 
     .intro {
-      max-width: 900px;
-      margin: 0 auto 3em;
-      font-size: clamp(1.1em, 4vw, 1.3em);
+      max-width: 960px;
+      margin: 0 auto 4em;
+      font-size: clamp(1.2em, 4.5vw, 1.45em);
       color: var(--text-light);
-    }
-
-    .trust-stats {
-      display: flex;
-      justify-content: center;
-      gap: 2.5em;
-      flex-wrap: wrap;
-      margin: 2em 0 4em;
-      font-size: 1.2em;
-    }
-
-    .stat-num {
-      font-size: 2em;
-      font-weight: 800;
-      color: var(--accent);
-      display: block;
-    }
-
-    .section {
-      padding: 80px 20px;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: clamp(2.2em, 7vw, 3.2em);
-      margin-bottom: 2.5em;
-      color: var(--accent);
     }
 
     .card {
       background: var(--card-bg);
-      border-radius: 16px;
+      border-radius: 20px;
       backdrop-filter: var(--blur);
-      border: 1px solid rgba(59,130,246,0.2);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid rgba(96, 165, 250, 0.18);
       box-shadow: var(--shadow);
       padding: 2em;
-      transition: all 0.4s ease;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(40px);
     }
 
     .card.visible {
@@ -96,131 +82,294 @@
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-12px) scale(1.03);
       box-shadow: var(--glow);
+      border-color: var(--accent-glow);
     }
 
-    /* Pricing */
-    .plans-grid {
+    /* Demo Section */
+    .demo-section {
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #050505, #0f0f1f);
+    }
+
+    .demo-section h2 {
+      text-align: center;
+      font-size: clamp(2.8em, 8vw, 4em);
+      margin-bottom: 3em;
+      color: var(--accent);
+      text-shadow: 0 0 30px rgba(59,130,246,0.4);
+    }
+
+    .video-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2em;
-      max-width: 1100px;
+      gap: 2.5em;
+      max-width: 1300px;
       margin: 0 auto;
     }
 
-    .plan-card {
+    .video-card {
       position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+    }
+
+    video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .video-card:hover video {
+      transform: scale(1.08);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .video-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .preview-btn {
+      display: block;
+      width: 100%;
+      margin-top: 1.2em;
+      background: linear-gradient(90deg, var(--accent), var(--accent-glow));
+      color: white;
+      padding: 1em;
+      font-size: 1.2em;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(59,130,246,0.35);
+      transition: all 0.4s ease;
+    }
+
+    .preview-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(96,165,250,0.6);
+      background: linear-gradient(90deg, var(--accent-glow), var(--accent));
+    }
+
+    /* Pricing */
+    .pricing-section {
+      padding: 100px 20px;
       text-align: center;
     }
 
-    .popular {
-      transform: scale(1.05);
-      z-index: 2;
+    .pricing-section h2 {
+      font-size: clamp(3em, 9vw, 4.5em);
+      margin-bottom: 3em;
+      color: var(--accent);
+      text-shadow: 0 0 35px rgba(59,130,246,0.5);
     }
 
-    .popular-badge {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--accent);
-      color: white;
-      padding: 0.4em 1.2em;
-      border-radius: 50px;
-      font-size: 0.95em;
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(59,130,246,0.4);
+    .price-card .card {
+      max-width: 480px;
+      margin: 0 auto;
     }
 
     .price {
-      font-size: clamp(2.8em, 8vw, 4em);
+      font-size: clamp(3.5em, 10vw, 5em);
       font-weight: 900;
-      color: var(--accent-glow);
-      margin: 0.8em 0 0.4em;
+      color: var(--neon);
+      margin: 1.2em 0;
+      animation: pulsePrice 3s infinite alternate;
     }
 
-    .price small {
-      font-size: 0.5em;
-      font-weight: 400;
-      color: var(--text-light);
+    @keyframes pulsePrice {
+      0% { text-shadow: 0 0 20px rgba(0,240,255,0.5); }
+      100% { text-shadow: 0 0 50px rgba(0,240,255,0.9); }
     }
 
     .features {
       list-style: none;
-      margin: 2em 0;
-      font-size: 1.15em;
-      text-align: left;
+      font-size: 1.25em;
+      margin: 2.5em 0;
     }
 
     .features li {
-      margin: 0.9em 0;
-      padding-left: 1.8em;
+      margin: 1em 0;
       position: relative;
+      padding-left: 1.8em;
     }
 
     .features li::before {
-      content: "✔";
+      content: "✦";
       color: var(--accent);
       position: absolute;
       left: 0;
+      font-size: 1.1em;
     }
 
     .btn {
       display: inline-block;
-      background: var(--accent);
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
       color: white;
-      padding: 1em 3em;
-      font-size: 1.3em;
-      font-weight: 700;
+      padding: 1.2em 3.5em;
+      font-size: 1.5em;
+      font-weight: 800;
       text-decoration: none;
-      border-radius: 50px;
-      margin-top: 1.5em;
-      transition: all 0.3s ease;
-      width: 100%;
-      max-width: 320px;
+      border-radius: 60px;
+      box-shadow: 0 10px 30px rgba(59,130,246,0.4);
+      transition: all 0.45s cubic-bezier(0.23,1,0.32,1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: linear-gradient(transparent, rgba(255,255,255,0.3), transparent);
+      transform: translateY(-100%) rotate(45deg);
+      transition: all 0.6s;
+    }
+
+    .btn:hover::before {
+      transform: translateY(100%) rotate(45deg);
     }
 
     .btn:hover {
-      background: var(--accent-glow);
-      transform: translateY(-3px);
-      box-shadow: var(--glow);
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 20px 50px rgba(59,130,246,0.7);
     }
 
-    /* FAQ */
-    .faq-item {
-      margin-bottom: 1.2em;
-      border-bottom: 1px solid rgba(59,130,246,0.15);
-    }
-
-    .faq-question {
-      cursor: pointer;
-      font-size: 1.3em;
-      padding: 1.2em 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
+    .note {
+      margin-top: 2em;
+      font-size: 1.15em;
       color: var(--text-light);
-      padding-bottom: 1em;
     }
 
-    .faq-item.active .faq-answer {
-      max-height: 400px;
+    /* Slider Section (replaced testimonials) */
+    .testimonials-section {
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #0a0a1a, #050505);
     }
 
-    @media (min-width: 640px) {
-      .plans-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-section h2 {
+      text-align: center;
+      font-size: clamp(3em, 8vw, 4.2em);
+      margin-bottom: 3.5em;
+      color: var(--accent);
+      text-shadow: 0 0 30px rgba(59,130,246,0.4);
     }
 
-    @media (min-width: 992px) {
-      .plans-grid { grid-template-columns: repeat(3, 1fr); }
-      .popular { transform: scale(1.08); }
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      transition: 0.6s ease;
+      border-radius: 0 8px 8px 0;
+      user-select: none;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .next {
+      right: 0;
+      border-radius: 8px 0 0 8px;
+    }
+
+    .prev:hover, .next:hover {
+      background: rgba(59,130,246,0.7);
+    }
+
+    /* Caption text */
+    .text {
+      color: #fff;
+      font-size: 1.5em;
+      padding: 12px 20px;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      border-radius: 0 0 20px 20px;
+      font-weight: bold;
+    }
+
+    /* Dots / bullets */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 6px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: var(--accent);
+    }
+
+    /* Fade animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    @media (max-width: 768px) {
+      .prev, .next {font-size: 18px; padding: 12px;}
+      .text {font-size: 1.2em; padding: 10px;}
+    }
+
+    @media (min-width: 640px) { 
+      .video-grid { grid-template-columns: repeat(2, 1fr); } 
+    }
+
+    @media (min-width: 1024px) { 
+      .video-grid { grid-template-columns: repeat(3, 1fr); } 
+      header { padding-top: 160px; }
     }
   </style>
 </head>
@@ -228,174 +377,141 @@
 
   <header>
     <h1>Dark4U Premium</h1>
-    <p class="tagline">Exclusive Desi Content – Private & Unlimited</p>
+    <p class="tagline">Unlock the Ultimate Exclusive Experience</p>
     <div class="intro">
-      HD videos, weekly fresh drops, 100% private Telegram delivery, instant access. Sirf ₹80/month se shuru.
-    </div>
-
-    <div class="trust-stats">
-      <div><span class="stat-num">+5K</span> Members</div>
-      <div><span class="stat-num">800+</span> Videos</div>
-      <div><span class="stat-num">4.9</span> Rating</div>
+      Premium members get unlimited access to high-quality, handpicked exclusive content. Fresh drops every week, 100% private bot delivery, HD/4K streaming, zero ads, instant unlocks.
     </div>
   </header>
 
-  <section class="section">
-    <h2>Choose Your Plan</h2>
-    <div class="plans-grid">
+  <section class="demo-section">
+    <h2>Content Previews</h2>
+    <div class="video-grid">
 
-      <div class="plan-card">
-        <div class="card">
-          <h3>Monthly</h3>
-          <p class="price">₹80 <small>/ month</small></p>
-          <ul class="features">
-            <li>Unlimited access</li>
-            <li>Weekly new content</li>
-            <li>Private bot delivery</li>
-            <li>HD quality</li>
-            <li>Instant unlock</li>
-          </ul>
-          <a href="https://t.me/dark4u21" class="btn">Join Monthly</a>
-        </div>
-      </div>
+      <a href="https://t.me/dark4u12Bot?start=BQADAQAD_AoAAl_CGUV3j9hDs1LEehYE" class="preview-btn">Only Fans Demo</a>
 
-      <div class="plan-card popular">
-        <div class="popular-badge">Most Popular</div>
-        <div class="card">
-          <h3>Quarterly</h3>
-          <p class="price">₹199 <small>/ 3 months</small></p>
-          <ul class="features">
-            <li>All monthly benefits</li>
-            <li>Save 17%</li>
-            <li>Bonus content pack</li>
-            <li>Priority access</li>
-            <li>Extra 7 days free</li>
-          </ul>
-          <a href="YOUR_QUARTERLY_LINK" class="btn">Get Best Deal</a>
-        </div>
-      </div>
+      <a href="https://t.me/dark4u12Bot?start=BQADAQADPAsAAl_CGUURgb69_rLKVxYE" class="preview-btn">Desi Demo</a>
 
-      <div class="plan-card">
-        <div class="card">
-          <h3>Yearly</h3>
-          <p class="price">₹799 <small>/ year</small></p>
-          <ul class="features">
-            <li>All quarterly benefits</li>
-            <li>Save 30%+</li>
-            <li>Lifetime updates</li>
-            <li>Exclusive perks</li>
-          </ul>
-          <a href="YOUR_YEARLY_LINK" class="btn">Join Yearly</a>
-        </div>
-      </div>
+      <a href="https://t.me/dark4u12Bot?start=BQADAQADYwsAAl_CGUUPY_QsOQqGSBYE" class="preview-btn">CP Demo</a>
+
+      <a href="https://t.me/Dark4usub_bot?start=BQADAQADGBcAAjVoWUWAz_YOLV4rxhYE" class="preview-btn">Girl Demo</a>
 
     </div>
   </section>
 
-  <!-- Demo / Testimonials section ko same .card style se daal dena -->
-
-  <section class="section">
-    <h2>Frequently Asked Questions</h2>
-    <div style="max-width: 800px; margin: 0 auto;">
-
-      <div class="faq-item">
-        <div class="faq-question">Payment kaise karte hain? <span>↓</span></div>
-        <div class="faq-answer">Telegram bot mein UPI ya card se direct pay karo, instant activate ho jata hai.</div>
+  <section class="pricing-section">
+    <h2>Choose Your Plan</h2>
+    <div class="price-card">
+      <div class="card">
+        <h3>Life Time Premium</h3>
+        <p class="price">₹80 / Life Time</p>
+        <ul class="features">
+          <li>Unlimited premium video access</li>
+          <li>New exclusive drops every week</li>
+          <li>Ultra-private Telegram bot delivery</li>
+          <li>Instant unlock – no waiting</li>
+          <li>HD / 4K quality + no ads</li>
+          <li>Priority support & updates</li>
+        </ul>
+        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u12</a>
+        <p class="note">One-click Telegram join – secure & instant setup.</p>
       </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Content kahan milega? <span>↓</span></div>
-        <div class="faq-answer">Private bot se direct video links milenge – no public groups, full privacy.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Cancel kaise karun? <span>↓</span></div>
-        <div class="faq-answer">Kisi bhi time bot se contact karo, subscription cancel ho jayegi.</div>
-      </div>
-
-      <!-- aur FAQs add kar sakte ho -->
-
     </div>
-  </section
-<section class="section">
-  <h2>What Our Members Say</h2>
-  
-  <div class="testimonial-carousel">
-    <div class="carousel-track">
-      
+  </section>
+
+  <section class="testimonials-section">
+    <h2>Exclusive Content Previews</h2>
+    <div class="slideshow-container">
+
       <!-- Slide 1 -->
-      <div class="testimonial-slide">
-        <div class="testimonial-card">
-          <img src="https://thumbs.dreamstime.com/b/smiling-young-indian-man-over-gray-background-people-concept-green-natural-136773167.jpg" alt="Rahul K." class="avatar">
-          <p class="testimonial-text">
-            "Bhai content next level hai! Daily new videos, quality top class. ₹80 mein itna value? Best decision tha premium join karna."
-          </p>
-          <p class="testimonial-author">Rahul K. <span>– 2 months member</span></p>
-        </div>
+      <div class="mySlides fade">
+        <img src="https://example.com/your-image1.jpg" style="width:100%" alt="Content Preview 1">
+        <div class="text">OnlyFans Premium Drop</div>
       </div>
-      
+
       <!-- Slide 2 -->
-      <div class="testimonial-slide">
-        <div class="testimonial-card">
-          <img src="https://ibb.co/mFGysqNQ" alt="Vikram S." class="avatar">
-          <p class="testimonial-text">
-            "Privacy 100%, bot delivery super fast. Free groups sab bakwas the, yeh real premium feel deta hai. Har hafte fresh maal!"
-          </p>
-          <p class="testimonial-author">Vikram S. <span>– Since launch</span></p>
-        </div>
+      <div class="mySlides fade">
+        <img src="https://justpaste.it/ndfgg" style="width:100%" alt="Content Preview 2">
+        <div class="text">Desi Exclusive Collection</div>
       </div>
-      
+
       <!-- Slide 3 -->
-      <div class="testimonial-slide">
-        <div class="testimonial-card">
-          <img src="https://www.shutterstock.com/shutterstock/photos/2619939871/display_1500/stock-photo-head-shot-portrait-of-happy-indian-businessman-company-head-or-executive-manager-dressed-in-casual-2619939871.jpg" alt="Amit P." class="avatar">
-          <p class="testimonial-text">
-            "No ads, no waiting, massive collection. Monthly plan liya aur regret zero. Sabko recommend kar raha hoon bhai!"
-          </p>
-          <p class="testimonial-author">Amit P. <span>– Happy subscriber</span></p>
-        </div>
+      <div class="mySlides fade">
+        <img src="https://example.com/your-image3.jpg" style="width:100%" alt="Content Preview 3">
+        <div class="text">High-Quality Specials</div>
       </div>
-      
+
       <!-- Slide 4 -->
-      <div class="testimonial-slide">
-        <div class="testimonial-card">
-          <img src="https://thumbs.dreamstime.com/b/close-up-portrait-young-smiling-indian-woman-denim-shirt-indoors-standing-smiling-camera-close-up-portrait-401219530.jpg" alt="Neha R." class="avatar">
-          <p class="testimonial-text">
-            "80 rupaye monthly mein itna exclusive content? Safe, private aur addictive. Dark4U team – respect! Thank you."
-          </p>
-          <p class="testimonial-author">Neha R. <span>– 3 months member</span></p>
-        </div>
+      <div class="mySlides fade">
+        <img src="https://example.com/your-image4.jpg" style="width:100%" alt="Content Preview 4">
+        <div class="text">Latest 4K Uploads</div>
       </div>
-      
-      <!-- Slide 5 (extra for better loop) -->
-      <div class="testimonial-slide">
-        <div class="testimonial-card">
-          <img src="https://thumbs.dreamstime.com/b/head-shot-portrait-handsome-smiling-young-male-looking-camera-shiny-smile-head-shot-photography-portrait-handsome-smiling-young-357008454.jpg" alt="Sachin M." class="avatar">
-          <p class="testimonial-text">
-            "HD videos har taste ke liye. Bot se direct mil jata hai, no hassle. Worth every paisa – join kar lo!"
-          </p>
-          <p class="testimonial-author">Sachin M. <span>– 1 month member</span></p>
-        </div>
-      </div>
-      
-      <!-- Duplicate first slide for seamless loop -->
-      <div class="testimonial-slide">
-        <div class="testimonial-card">
-          <img src="https://thumbs.dreamstime.com/b/smiling-young-indian-man-over-gray-background-people-concept-green-natural-136773167.jpg" alt="Rahul K." class="avatar">
-          <p class="testimonial-text">
-            "Bhai content next level hai! Daily new videos, quality top class. ₹80 mein itna value? Best decision tha premium join karna."
-          </p>
-          <p class="testimonial-author">Rahul K. <span>– 2 months member</span></p>
-        </div>
-      </div>
-      
+
+      <!-- Next & previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    
-    <!-- Navigation Arrows -->
-    <button class="carousel-prev">‹</button>
-    <button class="carousel-next">›</button>
-  </div>
-</section>
+    <br>
+
+    <!-- Dots below slider -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </section>
+
+  <script>
+    // Scroll reveal for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+
+    // Slideshow JavaScript
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+    // Auto slide every 4 seconds
+    setInterval(() => {
+      plusSlides(1);
+    }, 4000);
+  </script>
 
 </body>
 </html>
