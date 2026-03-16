@@ -15,16 +15,18 @@
       theme: {
         extend: {
           colors: {
-            neon: '#00f0ff',
-            accent: '#ff007a',     // hot pink
-            accent-glow: '#ff00ff' // magenta
+            'neon-cyan': '#00f0ff',
+            'hot-pink': '#ff007a',
+            'magenta-glow': '#ff00ff',
+            'accent-blue': '#3b82f6',
+            'accent-glow': '#60a5fa'
           }
         }
       },
       plugins: [require('daisyui')],
       daisyui: {
-        themes: ["cyberpunk", "dracula", "luxury", "night", "synthwave"],
-        darkTheme: "cyberpunk", // Change to "dracula" for deep purple vibe
+        themes: ["cyberpunk", "dracula", "luxury"],
+        darkTheme: "cyberpunk",  // Change to "dracula" for purple mystery vibe
         styled: true,
         base: true,
         utils: true
@@ -33,94 +35,90 @@
   </script>
 
   <style>
-    /* Custom glow & sexy tweaks */
+    body {
+      background: linear-gradient(135deg, #050505, #0a001a);
+    }
     .neon-glow {
-      box-shadow: 0 0 20px rgba(255, 0, 122, 0.6), 0 0 40px rgba(0, 240, 255, 0.3);
+      box-shadow: 0 0 25px rgba(255, 0, 122, 0.5), 0 0 50px rgba(0, 240, 255, 0.3);
     }
     .card-hover:hover {
-      transform: translateY(-12px) scale(1.05);
-      box-shadow: 0 0 35px rgba(255, 0, 122, 0.7) !important;
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 0 40px rgba(255, 0, 122, 0.6) !important;
     }
-    .bg-gradient-sexy {
-      background: linear-gradient(135deg, #0f001a, #1a001a, #000);
-    }
-    .preview-btn {
-      @apply btn btn-primary w-full text-lg font-bold shadow-xl hover:scale-105 transition-all duration-300 neon-glow;
+    .title-gradient {
+      background: linear-gradient(90deg, #ff007a, #00f0ff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   </style>
 </head>
-<body class="bg-gradient-sexy min-h-screen text-base-content">
+<body class="min-h-screen text-gray-100">
 
-  <!-- Age Gate Popup (18+ warning) -->
-  <div id="age-gate" class="fixed inset-0 bg-black/90 flex items-center justify-center z-50" style="display: flex;">
-    <div class="card bg-base-300 p-10 rounded-2xl text-center max-w-md neon-glow">
-      <h2 class="text-4xl font-bold mb-6 text-primary">18+ Only</h2>
-      <p class="text-xl mb-8">This site contains exclusive adult content. You must be 18 or older to enter.</p>
-      <button onclick="enterSite()" class="btn btn-primary btn-lg w-full text-2xl">I am 18 or older – Enter</button>
+  <!-- Age Gate -->
+  <div id="age-gate" class="fixed inset-0 bg-black/95 flex items-center justify-center z-50">
+    <div class="bg-base-300/80 backdrop-blur-xl p-10 rounded-3xl text-center max-w-md neon-glow border border-hot-pink/30">
+      <h2 class="text-5xl font-black title-gradient mb-6">18+ ONLY</h2>
+      <p class="text-xl mb-8">Exclusive adult content ahead. Confirm you're 18 or older.</p>
+      <button onclick="enterSite()" class="btn bg-hot-pink hover:bg-magenta-glow text-white btn-lg w-full text-2xl font-bold shadow-2xl">Enter Site 🔥</button>
     </div>
   </div>
 
-  <header class="py-32 px-6 text-center bg-gradient-to-b from-base-300/50 to-base-100/0">
-    <h1 class="text-6xl md:text-8xl font-black bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4 animate-pulse">
-      Dark4U Premium
-    </h1>
-    <p class="text-3xl md:text-4xl text-base-content/80 mb-8">Unlock the Ultimate Exclusive Experience</p>
-    <div class="max-w-4xl mx-auto text-lg md:text-xl text-base-content/70">
-      Premium members get unlimited access to high-quality, handpicked exclusive content. Fresh drops every week, 100% private bot delivery, HD/4K streaming, zero ads, instant unlocks.
+  <header class="py-32 px-6 text-center">
+    <h1 class="text-6xl md:text-9xl font-black title-gradient mb-4 animate-pulse">Dark4U Premium</h1>
+    <p class="text-3xl md:text-4xl text-gray-300 mb-6">Unlock the Ultimate Exclusive Experience</p>
+    <div class="max-w-3xl mx-auto text-lg md:text-2xl text-gray-400">
+      Unlimited high-quality exclusive content • Fresh weekly drops • Private Telegram bot • HD/4K • Zero ads • Instant access
     </div>
   </header>
 
-  <section class="demo-section py-24 px-6">
-    <h2 class="text-5xl md:text-7xl font-bold text-center mb-12 text-primary drop-shadow-lg">Content Previews</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-      <a href="https://t.me/dark4u12Bot?start=BQADAQAD_AoAAl_CGUV3j9hDs1LEehYE" class="preview-btn">Only Fans Demo</a>
-      <a href="https://t.me/dark4u12Bot?start=BQADAQADPAsAAl_CGUURgb69_rLKVxYE" class="preview-btn">Desi Demo</a>
-      <a href="https://t.me/dark4u12Bot?start=BQADAQADYwsAAl_CGUUPY_QsOQqGSBYE" class="preview-btn">CP Demo</a>
-      <a href="https://t.me/Dark4usub_bot?start=BQADAQADGBcAAjVoWUWAz_YOLV4rxhYE" class="preview-btn">Girl Demo</a>
+  <section class="py-20 px-6">
+    <h2 class="text-5xl md:text-7xl font-black text-center mb-12 text-hot-pink drop-shadow-lg">Content Previews</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <a href="https://t.me/dark4u12Bot?start=BQADAQAD_AoAAl_CGUV3j9hDs1LEehYE" class="btn bg-gradient-to-r from-accent-blue to-hot-pink text-white text-xl font-bold py-6 rounded-2xl neon-glow hover:scale-105 transition-all">Only Fans Demo</a>
+      <a href="https://t.me/dark4u12Bot?start=BQADAQADPAsAAl_CGUURgb69_rLKVxYE" class="btn bg-gradient-to-r from-accent-blue to-hot-pink text-white text-xl font-bold py-6 rounded-2xl neon-glow hover:scale-105 transition-all">Desi Demo</a>
+      <a href="https://t.me/dark4u12Bot?start=BQADAQADYwsAAl_CGUUPY_QsOQqGSBYE" class="btn bg-gradient-to-r from-accent-blue to-hot-pink text-white text-xl font-bold py-6 rounded-2xl neon-glow hover:scale-105 transition-all">CP Demo</a>
+      <a href="https://t.me/Dark4usub_bot?start=BQADAQADGBcAAjVoWUWAz_YOLV4rxhYE" class="btn bg-gradient-to-r from-accent-blue to-hot-pink text-white text-xl font-bold py-6 rounded-2xl neon-glow hover:scale-105 transition-all">Girl Demo</a>
     </div>
   </section>
 
-  <section class="pricing-section py-24 px-6 text-center">
-    <h2 class="text-6xl md:text-8xl font-black mb-12 text-primary drop-shadow-2xl">Choose Your Plan</h2>
-    <div class="card bg-base-200/70 backdrop-blur-xl border border-primary/30 p-10 max-w-lg mx-auto neon-glow card-hover">
-      <h3 class="text-4xl font-bold mb-6">Life Time Premium</h3>
-      <p class="text-7xl font-black text-neon mb-8 animate-pulse">₹80 / Life Time</p>
-      <ul class="text-xl space-y-4 mb-10 text-left">
-        <li>✔ Unlimited premium video access</li>
-        <li>✔ New exclusive drops every week</li>
-        <li>✔ Ultra-private Telegram bot delivery</li>
-        <li>✔ Instant unlock – no waiting</li>
-        <li>✔ HD / 4K quality + no ads</li>
-        <li>✔ Priority support & updates</li>
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-5xl md:text-7xl font-black mb-12 text-hot-pink drop-shadow-2xl">Choose Your Plan</h2>
+    <div class="card bg-base-200/60 backdrop-blur-2xl border border-hot-pink/40 p-10 max-w-lg mx-auto neon-glow card-hover rounded-3xl">
+      <h3 class="text-4xl font-bold mb-6 text-white">Life Time Premium</h3>
+      <p class="text-7xl font-black text-neon-cyan mb-8 animate-pulse">₹80 / Lifetime</p>
+      <ul class="text-xl space-y-4 mb-10 text-left text-gray-300">
+        <li>✔ Unlimited premium videos</li>
+        <li>✔ Weekly exclusive drops</li>
+        <li>✔ Private Telegram delivery</li>
+        <li>✔ Instant unlock, no wait</li>
+        <li>✔ HD/4K + ad-free</li>
+        <li>✔ Priority support</li>
       </ul>
-      <a href="https://t.me/dark4u21" class="btn btn-primary btn-lg w-full text-2xl font-black shadow-2xl hover:shadow-primary/70">Join Now @dark4u12</a>
-      <p class="mt-6 text-base-content/70">One-click Telegram join – secure & instant setup.</p>
+      <a href="https://t.me/dark4u21" class="btn bg-hot-pink hover:bg-magenta-glow text-white btn-lg w-full text-2xl font-black shadow-2xl">Join Now @dark4u12</a>
+      <p class="mt-6 text-gray-400">One-click Telegram join – secure & instant.</p>
     </div>
   </section>
 
-  <section class="testimonials-section py-24 px-6 bg-gradient-to-b from-base-300/30 to-transparent">
-    <h2 class="text-5xl md:text-7xl font-bold text-center mb-12 text-primary drop-shadow-lg">Exclusive Content Previews</h2>
-    <div class="slideshow-container max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl neon-glow">
-      <!-- Slides -->
-      <div class="mySlides fade"><img src="https://example.com/your-image1.jpg" class="w-full" alt="Content Preview 1"><div class="text">OnlyFans Premium Drop</div></div>
-      <div class="mySlides fade"><img src="https://justpaste.it/ndfgg" class="w-full" alt="Content Preview 2"><div class="text">Desi Exclusive Collection</div></div>
-      <div class="mySlides fade"><img src="https://example.com/your-image3.jpg" class="w-full" alt="Content Preview 3"><div class="text">High-Quality Specials</div></div>
-      <div class="mySlides fade"><img src="https://postimg.cc/5XVsd8Dj" class="w-full" alt="Content Preview 4"><div class="text">Latest 4K Uploads</div></div>
+  <section class="py-20 px-6 bg-gradient-to-b from-transparent to-black/50">
+    <h2 class="text-5xl md:text-7xl font-black text-center mb-12 text-hot-pink drop-shadow-lg">Exclusive Previews</h2>
+    <div class="slideshow-container max-w-5xl mx-auto rounded-3xl overflow-hidden neon-glow shadow-2xl">
+      <div class="mySlides fade"><img src="https://example.com/your-image1.jpg" class="w-full" alt="Preview 1"><div class="text bg-black/60 p-4 text-2xl font-bold">OnlyFans Premium Drop</div></div>
+      <div class="mySlides fade"><img src="https://justpaste.it/ndfgg" class="w-full" alt="Preview 2"><div class="text bg-black/60 p-4 text-2xl font-bold">Desi Exclusive Collection</div></div>
+      <div class="mySlides fade"><img src="https://example.com/your-image3.jpg" class="w-full" alt="Preview 3"><div class="text bg-black/60 p-4 text-2xl font-bold">High-Quality Specials</div></div>
+      <div class="mySlides fade"><img src="https://postimg.cc/5XVsd8Dj" class="w-full" alt="Preview 4"><div class="text bg-black/60 p-4 text-2xl font-bold">Latest 4K Uploads</div></div>
 
-      <!-- Controls -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev absolute top-1/2 left-0 -translate-y-1/2 bg-black/50 text-white p-4 text-3xl cursor-pointer hover:bg-hot-pink/70" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next absolute top-1/2 right-0 -translate-y-1/2 bg-black/50 text-white p-4 text-3xl cursor-pointer hover:bg-hot-pink/70" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <div class="text-center mt-6">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot inline-block w-4 h-4 bg-gray-500 rounded-full mx-2 cursor-pointer hover:bg-hot-pink" onclick="currentSlide(1)"></span>
+      <span class="dot inline-block w-4 h-4 bg-gray-500 rounded-full mx-2 cursor-pointer hover:bg-hot-pink" onclick="currentSlide(2)"></span>
+      <span class="dot inline-block w-4 h-4 bg-gray-500 rounded-full mx-2 cursor-pointer hover:bg-hot-pink" onclick="currentSlide(3)"></span>
+      <span class="dot inline-block w-4 h-4 bg-gray-500 rounded-full mx-2 cursor-pointer hover:bg-hot-pink" onclick="currentSlide(4)"></span>
     </div>
   </section>
 
   <script>
-    // Age Gate
     function enterSite() {
       document.getElementById('age-gate').style.display = 'none';
       localStorage.setItem('ageVerified', 'true');
@@ -129,10 +127,10 @@
       document.getElementById('age-gate').style.display = 'none';
     }
 
-    // Scroll reveal
+    // Scroll reveal for cards
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) entry.target.classList.add('visible', 'opacity-100', 'translate-y-0');
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.card').forEach(card => observer.observe(card));
@@ -148,9 +146,9 @@
       if (n > slides.length) slideIndex = 1;
       if (n < 1) slideIndex = slides.length;
       for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-      for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+      for (let i = 0; i < dots.length; i++) dots[i].classList.remove("bg-hot-pink");
       slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
+      dots[slideIndex-1].classList.add("bg-hot-pink");
     }
     setInterval(() => plusSlides(1), 4000);
   </script>
