@@ -87,25 +87,16 @@
       border-color: var(--accent-glow);
     }
 
-    .demo-section {
+    .demo-section, .proofs-section, .testimonials-section {
       padding: 100px 20px;
-      background: linear-gradient(to bottom, #050505, #0f0f1f);
+      text-align: center;
     }
 
-    .demo-section h2 {
-      text-align: center;
+    .demo-section, .proofs-section, .testimonials-section h2 {
       font-size: clamp(2.8em, 8vw, 4em);
-      margin-bottom: 3em;
+      margin-bottom: 1.5em;
       color: var(--accent);
       text-shadow: 0 0 30px rgba(59,130,246,0.4);
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5em;
-      max-width: 1300px;
-      margin: 0 auto;
     }
 
     .preview-btn {
@@ -195,20 +186,6 @@
       overflow: hidden;
     }
 
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: -50%; left: -50%;
-      width: 200%; height: 200%;
-      background: linear-gradient(transparent, rgba(255,255,255,0.3), transparent);
-      transform: translateY(-100%) rotate(45deg);
-      transition: all 0.6s;
-    }
-
-    .btn:hover::before {
-      transform: translateY(100%) rotate(45deg);
-    }
-
     .btn:hover {
       transform: translateY(-6px) scale(1.05);
       box-shadow: 0 20px 50px rgba(59,130,246,0.7);
@@ -220,32 +197,11 @@
       color: var(--text-light);
     }
 
-    /* Proofs Section */
-    .proofs-section {
-      padding: 100px 20px;
-      background: linear-gradient(to bottom, #0a0a1a, #050505);
-      text-align: center;
-    }
-
-    .proofs-section h2 {
-      font-size: clamp(2.8em, 8vw, 4em);
-      margin-bottom: 1.5em;
-      color: var(--accent);
-      text-shadow: 0 0 30px rgba(59,130,246,0.4);
-    }
-
-    .proofs-section .intro-text {
-      max-width: 900px;
-      margin: 0 auto 3em;
-      font-size: 1.35em;
-      line-height: 1.6;
-      color: var(--text-light);
-    }
-
+    /* Slider Common Styles */
     .slideshow-container {
       max-width: 900px;
       position: relative;
-      margin: 0 auto;
+      margin: 0 auto 2em;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -257,12 +213,11 @@
 
     .mySlides img {
       width: 100%;
-      max-height: 600px;
+      max-height: 580px;
       object-fit: contain;
+      background: #000;
       display: block;
       margin: 0 auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
     }
 
     .prev, .next {
@@ -271,71 +226,73 @@
       top: 50%;
       transform: translateY(-50%);
       width: auto;
-      padding: 20px;
-      margin-top: 0;
+      padding: 18px 24px;
       color: white;
       font-weight: bold;
-      font-size: 40px;
-      transition: all 0.4s ease;
-      border-radius: 12px;
+      font-size: 42px;
+      transition: all 0.3s ease;
+      border-radius: 50%;
       user-select: none;
-      background: rgba(59,130,246,0.5);
+      background: rgba(59,130,246,0.6);
       z-index: 10;
     }
 
-    .next {
-      right: 0;
-    }
+    .next { right: 20px; }
+    .prev { left: 20px; }
 
     .prev:hover, .next:hover {
-      background: rgba(59,130,246,0.85);
-      transform: translateY(-50%) scale(1.1);
+      background: var(--accent);
+      transform: translateY(-50%) scale(1.15);
     }
 
     .text {
-      color: #fff;
-      font-size: 1.3em;
-      padding: 12px 20px;
+      color: white;
+      font-size: 1.35em;
+      padding: 14px 20px;
       position: absolute;
-      bottom: 20px;
+      bottom: 0;
       width: 100%;
       text-align: center;
-      background: rgba(0,0,0,0.6);
-      border-radius: 0 0 20px 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
       font-weight: bold;
+    }
+
+    .dots-container {
+      text-align: center;
+      margin: 20px 0;
     }
 
     .dot {
       cursor: pointer;
-      height: 18px;
-      width: 18px;
+      height: 16px;
+      width: 16px;
       margin: 0 10px;
       background-color: #555;
       border-radius: 50%;
       display: inline-block;
-      transition: background-color 0.4s ease;
+      transition: all 0.4s;
     }
 
     .active, .dot:hover {
       background-color: var(--accent-glow);
+      transform: scale(1.3);
     }
 
     .fade {
       animation-name: fade;
-      animation-duration: 1.5s;
+      animation-duration: 1.2s;
     }
 
     @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
+      from {opacity: .4} to {opacity: 1}
     }
 
-    @media (min-width: 640px) { 
-      .video-grid { grid-template-columns: repeat(2, 1fr); } 
+    @media (min-width: 640px) {
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (min-width: 1024px) { 
-      .video-grid { grid-template-columns: repeat(3, 1fr); } 
+    @media (min-width: 1024px) {
+      .video-grid { grid-template-columns: repeat(3, 1fr); }
       header { padding-top: 160px; }
     }
   </style>
@@ -388,186 +345,165 @@
   </section>
 
   <section class="proofs-section">
-    <h2>Real Payment Proofs – Log Members Already Joined! 🔥</h2>
+    <h2>Real Payment Proofs – Members Already Joined! 🔥</h2>
     
-    <p class="intro-text">
-      भाई देख ले, ये 100% असली payment screenshots हैं – कोई fake, कोई editing नहीं। <br>
-      सबने सिर्फ ₹80 देकर lifetime premium access ले लिया। <br><br>
-      
-      नए content हर हफ्ते drop हो रहे हैं, bot से direct HD/4K मिल रहा है, zero wait, zero ads। <br>
-      जो आज join कर लेगा, वो कल से ही unlimited माल देखेगा – जो सोच रहा है "कल देख लूंगा", वो कल regret करेगा। <br><br>
-      
-      Doubt है? तो इन proofs को ध्यान से देख, date, time, amount सब clear है। <br>
-      और चाहिए proof? @dark4u21 पे personally मैसेज कर लेना, और स्क्रीनशॉट मांग लेना – हमेशा ready रहते हैं दिखाने के लिए। <br><br>
-      
-      <strong>₹80 में lifetime – इतना सस्ता कभी नहीं मिलेगा। Stock limited feel हो रहा है, जल्दी कर ले!</strong>
+    <p class="intro-text" style="max-width:900px; margin:0 auto 3em; font-size:1.35em; line-height:1.6; color:var(--text-light);">
+      भाई ये 100% real screenshots हैं – payment confirm, access दिया गया।<br>
+      ₹80 में lifetime, bot से तुरंत unlock।<br><br>
+      Doubt हो तो @dark4u21 पर मैसेज कर, और proofs मांग ले – हमेशा दिखाते हैं।<br>
+      <strong>जल्दी join कर ले, regret मत करना!</strong>
     </p>
 
     <div class="slideshow-container">
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/21wJHW8f/IMG-20260318-100837-029.jpg" alt="Payment Proof 1">
+        <img src="https://i.ibb.co/21wJHW8f/IMG-20260318-100837-029.jpg" alt="Proof 1">
         <div class="text">18 March 2026 – PhonePe ₹150 Received</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/217dd8F8/IMG-20260318-100837-103.jpg" alt="Payment Proof 2">
-        <div class="text">12 March 2026 – PhonePe Success</div>
+        <img src="https://i.ibb.co/217dd8F8/IMG-20260318-100837-103.jpg" alt="Proof 2">
+        <div class="text">12 March 2026 – Payment Success</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/yM2qj7Z/IMG-20260318-100837-125.jpg" alt="Payment Proof 3">
-        <div class="text">17 March 2026 – Instant Access Given</div>
+        <img src="https://i.ibb.co/yM2qj7Z/IMG-20260318-100837-125.jpg" alt="Proof 3">
+        <div class="text">17 March 2026 – Instant Access</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/wNhgVycV/Screenshot-20260318-101424-Telegram.png" alt="Payment Proof 4">
+        <img src="https://i.ibb.co/wNhgVycV/Screenshot-20260318-101424-Telegram.png" alt="Proof 4">
         <div class="text">18 March 2026 – UPI Verified @dark4u21</div>
       </div>
 
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1, 'proofs')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'proofs')">&#10095;</a>
     </div>
 
-    <br>
-
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
+    <div class="dots-container" id="proofs-dots">
+      <span class="dot" onclick="currentSlide(1, 'proofs')"></span>
+      <span class="dot" onclick="currentSlide(2, 'proofs')"></span>
+      <span class="dot" onclick="currentSlide(3, 'proofs')"></span>
+      <span class="dot" onclick="currentSlide(4, 'proofs')"></span>
     </div>
 
-    <p class="note" style="margin-top: 3em; font-size: 1.25em; text-align: center; color: #a0a0ff; line-height: 1.6;">
-      हर payment @dark4u21 को आती है → bot से तुरंत full access unlock → बस 1 मिनट का काम। <br>
-      Trusted since day 1 – हजारों भाई already enjoy कर रहे हैं। तू कब join कर रहा है? 😈
+    <p class="note" style="color:#a0a0ff; font-size:1.25em;">
+      हर payment तुरंत confirm → bot से access मिलता है। Trusted by many!
     </p>
   </section>
 
   <section class="testimonials-section">
     <h2>Exclusive Content Previews</h2>
     <div class="slideshow-container">
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" style="width:100%" alt="Content Preview 1">
+        <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" alt="Preview 1">
         <div class="text">Bro Sis</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" style="width:100%" alt="Content Preview 2">
+        <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" alt="Preview 2">
         <div class="text">CP</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/3m0g5HLP/Screenshot-20260309-175645-Telegram.png" style="width:100%" alt="Content Preview 3">
+        <img src="https://i.ibb.co/3m0g5HLP/Screenshot-20260309-175645-Telegram.png" alt="Preview 3">
         <div class="text">Brazzers Collection</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/HDG55xs8/Screenshot-20260309-175715-Telegram.png" style="width:100%" alt="Content Preview 4">
+        <img src="https://i.ibb.co/HDG55xs8/Screenshot-20260309-175715-Telegram.png" alt="Preview 4">
         <div class="text">Goddess Ana</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" style="width:100%" alt="Content Preview 5">
+        <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" alt="Preview 5">
         <div class="text">R@pe</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" style="width:100%" alt="Content Preview 6">
+        <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" alt="Preview 6">
         <div class="text">Girls Collection</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" style="width:100%" alt="Content Preview 7">
+        <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" alt="Preview 7">
         <div class="text">Spy Leaked</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" style="width:100%" alt="Content Preview 8">
+        <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" alt="Preview 8">
         <div class="text">Desi Uncut</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" style="width:100%" alt="Content Preview 9">
+        <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" alt="Preview 9">
         <div class="text">Blowjob</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" style="width:100%" alt="Content Preview 10">
+        <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" alt="Preview 10">
         <div class="text">Desi Webseries</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" style="width:100%" alt="Content Preview 11">
+        <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" alt="Preview 11">
         <div class="text">Pregnant</div>
       </div>
-
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" style="width:100%" alt="Content Preview 12">
+        <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" alt="Preview 12">
         <div class="text">Animal</div>
       </div>
 
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1, 'content')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'content')">&#10095;</a>
     </div>
-    <br>
 
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
+    <div class="dots-container" id="content-dots">
+      <span class="dot active" onclick="currentSlide(1, 'content')"></span>
+      <span class="dot" onclick="currentSlide(2, 'content')"></span>
+      <span class="dot" onclick="currentSlide(3, 'content')"></span>
+      <span class="dot" onclick="currentSlide(4, 'content')"></span>
     </div>
   </section>
 
   <script>
-    // Scroll reveal for cards
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.card').forEach(card => {
-      observer.observe(card);
-    });
+    document.querySelectorAll('.card').forEach(card => observer.observe(card));
 
-    // Slideshow for both sections (shared function)
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    // Separate slide indices for each slider
+    let proofIndex = 1;
+    let contentIndex = 1;
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
+    function plusSlides(n, sliderType) {
+      if (sliderType === 'proofs') {
+        showSlides(proofIndex += n, 'proofs', 'proofs-dots');
+      } else {
+        showSlides(contentIndex += n, 'content', 'content-dots');
+      }
     }
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
+    function currentSlide(n, sliderType) {
+      if (sliderType === 'proofs') {
+        showSlides(proofIndex = n, 'proofs', 'proofs-dots');
+      } else {
+        showSlides(contentIndex = n, 'content', 'content-dots');
+      }
     }
 
-    function showSlides(n) {
+    function showSlides(n, sliderType, dotsId) {
       let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      
-      if (n > slides.length) {slideIndex = 1;}
-      if (n < 1) {slideIndex = slides.length;}
-      
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      
-      slides[slideIndex-1].style.display = "block";  
-      if (dots[slideIndex-1]) {
-        dots[slideIndex-1].className += " active";
-      }
+      let slides = document.querySelectorAll(`.slideshow-container:nth-of-type(${sliderType === 'proofs' ? 1 : 2}) .mySlides`);
+      let dots = document.querySelectorAll(`#${dotsId} .dot`);
+
+      if (n > slides.length) n = 1;
+      if (n < 1) n = slides.length;
+
+      slides.forEach(slide => slide.style.display = "none");
+
+      dots.forEach(dot => dot.classList.remove("active"));
+
+      slides[n-1].style.display = "block";
+      dots[n-1].classList.add("active");
+
+      if (sliderType === 'proofs') proofIndex = n;
+      else contentIndex = n;
     }
+
+    // Initialize both sliders
+    showSlides(proofIndex, 'proofs', 'proofs-dots');
+    showSlides(contentIndex, 'content', 'content-dots');
   </script>
 
 </body>
