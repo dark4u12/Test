@@ -108,6 +108,46 @@
       margin: 0 auto;
     }
 
+    .video-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+    }
+
+    video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .video-card:hover video {
+      transform: scale(1.08);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .video-card:hover .overlay {
+      opacity: 1;
+    }
+
     .preview-btn {
       display: block;
       width: 100%;
@@ -218,45 +258,6 @@
       margin-top: 2em;
       font-size: 1.15em;
       color: var(--text-light);
-    }
-
-    .proof-section {
-      padding: 100px 20px;
-      background: linear-gradient(to bottom, #0f0f1f, #050505);
-      text-align: center;
-    }
-
-    .proof-section h2 {
-      font-size: clamp(2.8em, 8vw, 4em);
-      margin-bottom: 1.5em;
-      color: var(--accent);
-      text-shadow: 0 0 30px rgba(59,130,246,0.4);
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5em;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    .proof-card.card {
-      padding: 1.5em;
-      text-align: center;
-    }
-
-    .proof-card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1.2em;
-      box-shadow: var(--shadow);
-    }
-
-    .proof-title {
-      font-size: 1.3em;
-      color: var(--neon);
-      margin-bottom: 0.6em;
     }
 
     .testimonials-section {
@@ -383,21 +384,24 @@
 
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD6QkAAtuAeUWEBm-UthLVUhYE" class="preview-btn">CP Demo</a>
 
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADFxcAAsl_gEXEWnPe4NrAzhYE" class="preview-btn">R@pe Demo</a>
-
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADFxcAAsl_gEXEWnPe4NrAzhYE" class="preview-btn">R@pe Demo</a>
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD3AkAAtuAeUWcoWWBrjq8cBYE" class="preview-btn">Girl Demo</a>
 
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQAECgACt0GpRUsG4etfDqbpFgQ" class="preview-btn">Pregnant Demo</a>
+<a href="https://t.me/dark4udemo_bot?start=BQADAQAECgACt0GpRUsG4etfDqbpFgQ" class="preview-btn">Pregnant Demo</a>
 
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADig0AAtqEmUVxejNh68B4QhYE" class="preview-btn">Blowjob Demo</a>
 
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADDAcAAoqO2EWCzvXx_pTa6BYE" class="preview-btn">Animal Demo</a>
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADig0AAtqEmUVxejNh68B4QhYE" class="preview-btn">Blowjob Demo</a>
 
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADiQ0AAqnzsEW1ojxY41ZKfRYE" class="preview-btn">Tango Demo</a>
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADDAcAAoqO2EWCzvXx_pTa6BYE" class="preview-btn">Animal Demo</a>
 
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADIhMAArdBoUWJrZRdviuXxRYE" class="preview-btn">Siteripe Demo</a>
 
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADHg8AArdBoUXGhgIwbWNiXRYE" class="preview-btn">Desi Webseries Demo</a>
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADiQ0AAqnzsEW1ojxY41ZKfRYE" class="preview-btn">Tango Demo</a>
+
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADIhMAArdBoUWJrZRdviuXxRYE" class="preview-btn">Siteripe Demo</a>
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADHg8AArdBoUXGhgIwbWNiXRYE" class="preview-btn">Desi Webseries Demo</a>
+
 
     </div>
   </section>
@@ -416,47 +420,53 @@
           <li>HD / 4K quality + no ads</li>
           <li>Priority support & updates</li>
         </ul>
-        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u21</a>
+        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u12</a>
         <p class="note">One-click Telegram join – secure & instant setup.</p>
       </div>
     </div>
   </section>
 
-  <!-- Payment Proofs Section - Pahle wala hi wapas daala -->
-  <section class="proof-section">
-    <h2>Real Payment Proofs & Happy Members</h2>
-    <p class="intro" style="max-width: 900px; margin: 0 auto 3em; font-size: 1.3em; color: var(--text-light);">
-      देखिए हमारे members ने कैसे ₹80 में lifetime access लिया और instantly content receive किया। 100% real proofs – edited नहीं!
-    </p>
+<section class="proof-section" style="padding: 100px 20px; background: linear-gradient(to bottom, #0f0f1f, #050505); text-align: center;">
+  <h2 style="font-size: clamp(2.8em, 8vw, 4em); margin-bottom: 2.5em; color: var(--accent); text-shadow: 0 0 30px rgba(59,130,246,0.4);">
+    Real Payment Proofs & Happy Members
+  </h2>
+  <p class="intro" style="max-width: 900px; margin: 0 auto 3em; font-size: 1.3em; color: var(--text-light);">
+    देखिए हमारे members ने कैसे ₹80 में lifetime access लिया और instantly content receive किया। 100% real proofs – edited नहीं!
+  </p>
 
-    <div class="proof-grid">
-      
-      <div class="proof-card card">
-        <img src="https://i.ibb.co/XXXXXXX/payment-proof-1.jpg" alt="Payment Proof 1" style="width:100%; border-radius: 12px; margin-bottom: 1em; box-shadow: var(--shadow);">
-        <p class="proof-title">UPI Payment – 10 March 2026</p>
-        <p class="note">Paid ₹80 via Google Pay → Got full access in 2 mins</p>
-      </div>
-
-      <div class="proof-card card">
-        <img src="https://i.ibb.co/YYYYYYY/success-msg-2.png" alt="User Thank You" style="width:100%; border-radius: 12px; margin-bottom: 1em; box-shadow: var(--shadow);">
-        <p class="proof-title">Member Feedback – Telegram Chat</p>
-        <p class="note">"Bhai content mind-blowing hai, animal aur CP demos से भी बेहतर full pack मिल गया!"</p>
-      </div>
-
-      <div class="proof-card card">
-        <img src="https://i.ibb.co/ZZZZZZZ/proof-3.jpg" alt="Payment Proof 3" style="width:100%; border-radius: 12px; margin-bottom: 1em; box-shadow: var(--shadow);">
-        <p class="proof-title">PhonePe Transaction – Yesterday</p>
-        <p class="note">Instant unlock – HD videos delivered via bot</p>
-      </div>
-
-      <!-- और 4-6 और proofs डाल सकते हो इसी तरह -->
-
+  <div class="proof-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5em; max-width: 1300px; margin: 0 auto;">
+    
+    <!-- Proof Item 1 -->
+    <div class="proof-card card">
+      <img src="https://i.ibb.co/XXXXXXX/payment-proof-1.jpg" alt="Payment Proof 1" style="width:100%; border-radius: 12px; margin-bottom: 1em; box-shadow: var(--shadow);">
+      <p style="font-size: 1.2em; color: var(--neon);">UPI Payment – 10 March 2026</p>
+      <p class="note">Paid ₹80 via Google Pay → Got full access in 2 mins</p>
     </div>
 
-    <p class="note" style="margin-top: 4em; font-size: 1.3em;">
-      रोज़ 50+ members join कर रहे हैं। Payment proof खुद Telegram पर @dark4u21 पर चेक कर सकते हो।
-    </p>
-  </section>
+    <!-- Proof Item 2 -->
+    <div class="proof-card card">
+      <img src="https://i.ibb.co/YYYYYYY/success-msg-2.png" alt="User Thank You" style="width:100%; border-radius: 12px; margin-bottom: 1em; box-shadow: var(--shadow);">
+      <p style="font-size: 1.2em; color: var(--neon);">Member Feedback – Telegram Chat</p>
+      <p class="note">"Bhai content mind-blowing hai, animal aur CP demos से भी बेहतर full pack मिल गया!"</p>
+    </div>
+
+    <!-- Proof Item 3 -->
+    <div class="proof-card card">
+      <img src="https://i.ibb.co/ZZZZZZZ/proof-3.jpg" alt="Payment Proof 3" style="width:100%; border-radius: 12px; margin-bottom: 1em; box-shadow: var(--shadow);">
+      <p style="font-size: 1.2em; color: var(--neon);">PhonePe Transaction – Yesterday</p>
+      <p class="note">Instant unlock – HD videos delivered via bot</p>
+    </div>
+
+    <!-- और 4-6 और proofs डाल सकते हो इसी तरह -->
+
+  </div>
+
+  <p class="note" style="margin-top: 4em; font-size: 1.3em;">
+    रोज़ 50+ members join कर रहे हैं। Payment proof खुद Telegram पर @dark4u21 पर चेक कर सकते हो।
+  </p>
+</section>
+
+
 
   <section class="testimonials-section">
     <h2>Exclusive Content Previews</h2>
@@ -485,73 +495,70 @@
         <img src="https://i.ibb.co/HDG55xs8/Screenshot-20260309-175715-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Goddess Ana</div>
       </div>
-
-      <!-- Slide 5 -->
+ <!-- Slide 5 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" style="width:100%" alt="Content Preview 5">
+        <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">R@pe</div>
       </div>
 
-      <!-- Slide 6 -->
+ <!-- Slide 6 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" style="width:100%" alt="Content Preview 6">
+        <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Girls Collection</div>
       </div>
 
-      <!-- Slide 7 -->
+
+ <!-- Slide 7 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" style="width:100%" alt="Content Preview 7">
+        <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Spy Leaked</div>
       </div>
 
-      <!-- Slide 8 -->
+<!-- Slide 8 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" style="width:100%" alt="Content Preview 8">
+        <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Desi Uncut</div>
       </div>
 
-      <!-- Slide 9 -->
+
+<!-- Slide 9 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" style="width:100%" alt="Content Preview 9">
+        <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Blowjob</div>
       </div>
 
-      <!-- Slide 10 -->
+<!-- Slide 10 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" style="width:100%" alt="Content Preview 10">
+        <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Desi Webseries</div>
       </div>
 
-      <!-- Slide 11 -->
+
+<!-- Slide 11 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" style="width:100%" alt="Content Preview 11">
+        <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Pregnant</div>
       </div>
 
-      <!-- Slide 12 -->
+<!-- Slide 12 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" style="width:100%" alt="Content Preview 12">
+        <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Animal</div>
       </div>
 
+
+      <!-- Next & previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
 
+    <!-- Dots below slider -->
     <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
       <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-      <span class="dot" onclick="currentSlide(6)"></span>
-      <span class="dot" onclick="currentSlide(7)"></span>
-      <span class="dot" onclick="currentSlide(8)"></span>
-      <span class="dot" onclick="currentSlide(9)"></span>
-      <span class="dot" onclick="currentSlide(10)"></span>
-      <span class="dot" onclick="currentSlide(11)"></span>
-      <span class="dot" onclick="currentSlide(12)"></span>
     </div>
   </section>
 
@@ -569,7 +576,7 @@
       observer.observe(card);
     });
 
-    // Slideshow JavaScript
+    // Slideshow JavaScript (automatic scrolling band kar diya)
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -600,6 +607,9 @@
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
     }
+
+    // Yeh line comment out / hata diya gaya hai → ab auto nahi chalega
+    // setInterval(() => { plusSlides(1); }, 4000);
   </script>
 
 </body>
