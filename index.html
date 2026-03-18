@@ -108,46 +108,6 @@
       margin: 0 auto;
     }
 
-    .video-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 18px;
-    }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      background: #000;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
-    }
-
-    video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .video-card:hover video {
-      transform: scale(1.08);
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
-
-    .video-card:hover .overlay {
-      opacity: 1;
-    }
-
     .preview-btn {
       display: block;
       width: 100%;
@@ -260,6 +220,7 @@
       color: var(--text-light);
     }
 
+    /* Proofs Section */
     .proofs-section {
       padding: 100px 20px;
       background: linear-gradient(to bottom, #0a0a1a, #050505);
@@ -284,7 +245,7 @@
     .slideshow-container {
       max-width: 900px;
       position: relative;
-      margin: auto;
+      margin: 0 auto;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -294,29 +255,41 @@
       display: none;
     }
 
+    .mySlides img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    }
+
     .prev, .next {
       cursor: pointer;
       position: absolute;
       top: 50%;
+      transform: translateY(-50%);
       width: auto;
-      padding: 16px;
-      margin-top: -22px;
+      padding: 20px;
+      margin-top: 0;
       color: white;
       font-weight: bold;
-      font-size: 24px;
-      transition: 0.6s ease;
-      border-radius: 0 8px 8px 0;
+      font-size: 40px;
+      transition: all 0.4s ease;
+      border-radius: 12px;
       user-select: none;
-      background: rgba(0,0,0,0.4);
+      background: rgba(59,130,246,0.5);
+      z-index: 10;
     }
 
     .next {
       right: 0;
-      border-radius: 8px 0 0 8px;
     }
 
     .prev:hover, .next:hover {
-      background: rgba(59,130,246,0.7);
+      background: rgba(59,130,246,0.85);
+      transform: translateY(-50%) scale(1.1);
     }
 
     .text {
@@ -327,24 +300,24 @@
       bottom: 20px;
       width: 100%;
       text-align: center;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6);
       border-radius: 0 0 20px 20px;
       font-weight: bold;
     }
 
     .dot {
       cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 6px;
-      background-color: #bbb;
+      height: 18px;
+      width: 18px;
+      margin: 0 10px;
+      background-color: #555;
       border-radius: 50%;
       display: inline-block;
-      transition: background-color 0.6s ease;
+      transition: background-color 0.4s ease;
     }
 
     .active, .dot:hover {
-      background-color: var(--accent);
+      background-color: var(--accent-glow);
     }
 
     .fade {
@@ -380,29 +353,17 @@
   <section class="demo-section">
     <h2>Content Previews</h2>
     <div class="video-grid">
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADwAkAAtuAeUUq8ifcNoSC_RYE" class="preview-btn">Only Fans Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD7wkAAtuAeUVDYKsrKD4yzRYE" class="preview-btn">Desi Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD6QkAAtuAeUWEBm-UthLVUhYE" class="preview-btn">CP Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADFxcAAsl_gEXEWnPe4NrAzhYE" class="preview-btn">R@pe Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD3AkAAtuAeUWcoWWBrjq8cBYE" class="preview-btn">Girl Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAECgACt0GpRUsG4etfDqbpFgQ" class="preview-btn">Pregnant Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADig0AAtqEmUVxejNh68B4QhYE" class="preview-btn">Blowjob Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADDAcAAoqO2EWCzvXx_pTa6BYE" class="preview-btn">Animal Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADiQ0AAqnzsEW1ojxY41ZKfRYE" class="preview-btn">Tango Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADIhMAArdBoUWJrZRdviuXxRYE" class="preview-btn">Siteripe Demo</a>
-
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADHg8AArdBoUXGhgIwbWNiXRYE" class="preview-btn">Desi Webseries Demo</a>
-
     </div>
   </section>
 
@@ -444,37 +405,32 @@
 
     <div class="slideshow-container">
 
-      <!-- Slide 1 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/21wJHW8f/IMG-20260318-100837-029.jpg" style="width:100%" alt="Payment Proof 1">
+        <img src="https://i.ibb.co/21wJHW8f/IMG-20260318-100837-029.jpg" alt="Payment Proof 1">
         <div class="text">18 March 2026 – PhonePe ₹150 Received</div>
       </div>
 
-      <!-- Slide 2 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/217dd8F8/IMG-20260318-100837-103.jpg" style="width:100%" alt="Payment Proof 2">
+        <img src="https://i.ibb.co/217dd8F8/IMG-20260318-100837-103.jpg" alt="Payment Proof 2">
         <div class="text">12 March 2026 – PhonePe Success</div>
       </div>
 
-      <!-- Slide 3 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/yM2qj7Z/IMG-20260318-100837-125.jpg" style="width:100%" alt="Payment Proof 3">
+        <img src="https://i.ibb.co/yM2qj7Z/IMG-20260318-100837-125.jpg" alt="Payment Proof 3">
         <div class="text">17 March 2026 – Instant Access Given</div>
       </div>
 
-      <!-- Slide 4 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/wNhgVycV/Screenshot-20260318-101424-Telegram.png" style="width:100%" alt="Payment Proof 4">
+        <img src="https://i.ibb.co/wNhgVycV/Screenshot-20260318-101424-Telegram.png" alt="Payment Proof 4">
         <div class="text">18 March 2026 – UPI Verified @dark4u21</div>
       </div>
 
-      <!-- Next & previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+
     <br>
 
-    <!-- Dots below slider -->
     <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
@@ -482,7 +438,7 @@
       <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
-    <p class="note" style="margin-top: 4em; font-size: 1.25em; text-align: center; color: #a0a0ff;">
+    <p class="note" style="margin-top: 3em; font-size: 1.25em; text-align: center; color: #a0a0ff; line-height: 1.6;">
       हर payment @dark4u21 को आती है → bot से तुरंत full access unlock → बस 1 मिनट का काम। <br>
       Trusted since day 1 – हजारों भाई already enjoy कर रहे हैं। तू कब join कर रहा है? 😈
     </p>
@@ -492,85 +448,71 @@
     <h2>Exclusive Content Previews</h2>
     <div class="slideshow-container">
 
-      <!-- Slide 1 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" style="width:100%" alt="Content Preview 1">
         <div class="text">Bro Sis</div>
       </div>
 
-      <!-- Slide 2 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" style="width:100%" alt="Content Preview 2">
         <div class="text">CP</div>
       </div>
 
-      <!-- Slide 3 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/3m0g5HLP/Screenshot-20260309-175645-Telegram.png" style="width:100%" alt="Content Preview 3">
         <div class="text">Brazzers Collection</div>
       </div>
 
-      <!-- Slide 4 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/HDG55xs8/Screenshot-20260309-175715-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Goddess Ana</div>
       </div>
 
-      <!-- Slide 5 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" style="width:100%" alt="Content Preview 5">
         <div class="text">R@pe</div>
       </div>
 
-      <!-- Slide 6 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" style="width:100%" alt="Content Preview 6">
         <div class="text">Girls Collection</div>
       </div>
 
-      <!-- Slide 7 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" style="width:100%" alt="Content Preview 7">
         <div class="text">Spy Leaked</div>
       </div>
 
-      <!-- Slide 8 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" style="width:100%" alt="Content Preview 8">
         <div class="text">Desi Uncut</div>
       </div>
 
-      <!-- Slide 9 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" style="width:100%" alt="Content Preview 9">
         <div class="text">Blowjob</div>
       </div>
 
-      <!-- Slide 10 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" style="width:100%" alt="Content Preview 10">
         <div class="text">Desi Webseries</div>
       </div>
 
-      <!-- Slide 11 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" style="width:100%" alt="Content Preview 11">
         <div class="text">Pregnant</div>
       </div>
 
-      <!-- Slide 12 -->
       <div class="mySlides fade">
         <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" style="width:100%" alt="Content Preview 12">
         <div class="text">Animal</div>
       </div>
 
-      <!-- Next & previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
 
-    <!-- Dots below slider -->
     <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
@@ -593,7 +535,7 @@
       observer.observe(card);
     });
 
-    // Slideshow JavaScript (used by both sliders)
+    // Slideshow for both sections (shared function)
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -610,8 +552,8 @@
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
       
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
+      if (n > slides.length) {slideIndex = 1;}
+      if (n < 1) {slideIndex = slides.length;}
       
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
@@ -622,7 +564,9 @@
       }
       
       slides[slideIndex-1].style.display = "block";  
-      if (dots[slideIndex-1]) dots[slideIndex-1].className += " active";
+      if (dots[slideIndex-1]) {
+        dots[slideIndex-1].className += " active";
+      }
     }
   </script>
 
