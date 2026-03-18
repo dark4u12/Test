@@ -6,80 +6,74 @@
   <title>Dark4U Premium – Exclusive Access</title>
   <style>
     :root {
-      --bg: #05050f;
-      --card-bg: rgba(18, 18, 35, 0.38);
-      --text: #f0f0ff;
-      --text-light: #b0b0d0;
+      --bg: #050505;
+      --card-bg: rgba(20, 20, 30, 0.45);
+      --text: #f0f0f5;
+      --text-light: #b0b0c0;
       --accent: #3b82f6;
       --accent-glow: #60a5fa;
       --neon: #00f0ff;
-      --glow: 0 0 25px rgba(59, 130, 246, 0.55), 0 0 50px rgba(0, 240, 255, 0.3);
-      --shadow: 0 15px 50px rgba(0,0,0,0.75);
-      --blur: blur(20px);
+      --glow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(0, 240, 255, 0.25);
+      --shadow: 0 12px 40px rgba(0,0,0,0.7);
+      --blur: blur(16px);
     }
 
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: 
-        radial-gradient(circle at 15% 25%, rgba(0, 240, 255, 0.09), transparent 45%),
-        radial-gradient(circle at 85% 75%, rgba(59, 130, 246, 0.07), transparent 55%),
-        #0a0a18;
-      background-attachment: fixed;
+      background: var(--bg);
       color: var(--text);
       line-height: 1.7;
       overflow-x: hidden;
     }
 
     header {
-      padding: 160px 20px 100px;
+      padding: 140px 20px 80px;
       text-align: center;
-      background: linear-gradient(to bottom, rgba(10,10,35,0.7), transparent);
+      background: linear-gradient(to bottom, #0a0a1f, #050505);
     }
 
     h1 {
-      font-size: clamp(3.5em, 11vw, 5.8em);
+      font-size: clamp(3.2em, 10vw, 5.2em);
       font-weight: 900;
-      letter-spacing: -3px;
-      background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc, #00f0ff);
+      letter-spacing: -2px;
+      background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5em;
-      animation: titleGlow 5s ease-in-out infinite alternate;
+      margin-bottom: 0.4em;
+      animation: titleGlow 4s ease-in-out infinite alternate;
     }
 
     @keyframes titleGlow {
-      0% { text-shadow: 0 0 25px rgba(96,165,250,0.7); }
-      100% { text-shadow: 0 0 55px rgba(165,180,252,1); }
+      0% { text-shadow: 0 0 20px rgba(96,165,250,0.6); }
+      100% { text-shadow: 0 0 40px rgba(165,180,252,0.9); }
     }
 
     .tagline {
-      font-size: clamp(1.7em, 6.5vw, 2.4em);
+      font-size: clamp(1.6em, 6vw, 2.2em);
       color: var(--text-light);
-      margin-bottom: 1.8em;
-      opacity: 0.92;
+      margin-bottom: 1.5em;
+      opacity: 0.9;
     }
 
     .intro {
-      max-width: 980px;
-      margin: 0 auto 5em;
-      font-size: clamp(1.25em, 4.8vw, 1.55em);
+      max-width: 960px;
+      margin: 0 auto 4em;
+      font-size: clamp(1.2em, 4.5vw, 1.45em);
       color: var(--text-light);
     }
 
     .card {
       background: var(--card-bg);
-      border-radius: 24px;
-      backdrop-filter: var(--blur) saturate(180%);
-      -webkit-backdrop-filter: var(--blur) saturate(180%);
-      border: 1px solid rgba(96, 165, 250, 0.28);
-      box-shadow: 
-        inset 0 0 25px rgba(96,165,250,0.15),
-        var(--shadow);
-      padding: 2.5em;
-      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border-radius: 20px;
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid rgba(96, 165, 250, 0.18);
+      box-shadow: var(--shadow);
+      padding: 2em;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(40px);
     }
 
     .card.visible {
@@ -88,214 +82,269 @@
     }
 
     .card:hover {
-      transform: translateY(-18px) scale(1.045);
-      box-shadow: 
-        var(--glow),
-        inset 0 0 40px rgba(0,240,255,0.18);
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: var(--glow);
       border-color: var(--accent-glow);
     }
 
     .demo-section {
-      padding: 120px 20px;
-      background: linear-gradient(to bottom, #05050f, #0f0f25);
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #050505, #0f0f1f);
     }
 
     .demo-section h2 {
       text-align: center;
-      font-size: clamp(3em, 9vw, 4.5em);
-      margin-bottom: 3.5em;
+      font-size: clamp(2.8em, 8vw, 4em);
+      margin-bottom: 3em;
       color: var(--accent);
-      text-shadow: 0 0 40px rgba(59,130,246,0.5);
+      text-shadow: 0 0 30px rgba(59,130,246,0.4);
     }
 
     .video-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2.8em;
-      max-width: 1400px;
+      gap: 2.5em;
+      max-width: 1300px;
       margin: 0 auto;
     }
 
     .video-card {
       position: relative;
       overflow: hidden;
-      border-radius: 20px;
-      transition: all 0.5s ease;
+      border-radius: 18px;
     }
 
     .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
       background: #000;
-      border-radius: 20px;
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: inset 0 0 35px rgba(0,0,0,0.85);
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
     }
 
-    .video-wrapper img {
+    video {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       object-fit: cover;
-      transition: transform 0.7s ease;
+      transition: transform 0.6s ease;
     }
 
-    .video-card:hover .video-wrapper img {
-      transform: scale(1.09);
+    .video-card:hover video {
+      transform: scale(1.08);
     }
 
-    .play-overlay {
+    .overlay {
       position: absolute;
       inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.45);
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
       opacity: 0;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
     }
 
-    .video-card:hover .play-overlay {
+    .video-card:hover .overlay {
       opacity: 1;
-    }
-
-    .play-overlay svg {
-      width: 90px;
-      height: 90px;
-      fill: white;
-      filter: drop-shadow(0 0 20px rgba(59,130,246,0.9));
-      transition: transform 0.4s;
-    }
-
-    .video-card:hover .play-overlay svg {
-      transform: scale(1.15);
     }
 
     .preview-btn {
       display: block;
       width: 100%;
-      margin-top: 1.4em;
-      background: linear-gradient(90deg, var(--accent), var(--accent-glow), var(--neon));
-      background-size: 200% 200%;
-      animation: gradientFlow 10s ease infinite;
+      margin-top: 1.2em;
+      background: linear-gradient(90deg, var(--accent), var(--accent-glow));
       color: white;
-      padding: 1.2em;
-      font-size: 1.25em;
+      padding: 1em;
+      font-size: 1.2em;
       font-weight: 700;
       text-align: center;
       text-decoration: none;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(59,130,246,0.4);
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(59,130,246,0.35);
       transition: all 0.4s ease;
     }
 
-    @keyframes gradientFlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     .preview-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 45px rgba(96,165,250,0.65);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(96,165,250,0.6);
+      background: linear-gradient(90deg, var(--accent-glow), var(--accent));
     }
 
     .pricing-section {
-      padding: 120px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
 
     .pricing-section h2 {
-      font-size: clamp(3.2em, 10vw, 5em);
-      margin-bottom: 4em;
+      font-size: clamp(3em, 9vw, 4.5em);
+      margin-bottom: 3em;
       color: var(--accent);
-      text-shadow: 0 0 45px rgba(59,130,246,0.6);
+      text-shadow: 0 0 35px rgba(59,130,246,0.5);
     }
 
     .price-card .card {
-      max-width: 520px;
+      max-width: 480px;
       margin: 0 auto;
     }
 
     .price {
-      font-size: clamp(4em, 12vw, 6em);
+      font-size: clamp(3.5em, 10vw, 5em);
       font-weight: 900;
       color: var(--neon);
-      margin: 1.4em 0;
-      animation: pulsePrice 4s infinite alternate;
+      margin: 1.2em 0;
+      animation: pulsePrice 3s infinite alternate;
     }
 
     @keyframes pulsePrice {
-      0% { text-shadow: 0 0 25px rgba(0,240,255,0.6); }
-      100% { text-shadow: 0 0 60px rgba(0,240,255,1); }
+      0% { text-shadow: 0 0 20px rgba(0,240,255,0.5); }
+      100% { text-shadow: 0 0 50px rgba(0,240,255,0.9); }
     }
 
     .features {
       list-style: none;
-      font-size: 1.3em;
-      margin: 3em 0;
+      font-size: 1.25em;
+      margin: 2.5em 0;
     }
 
     .features li {
-      margin: 1.2em 0;
+      margin: 1em 0;
       position: relative;
-      padding-left: 2em;
+      padding-left: 1.8em;
     }
 
     .features li::before {
       content: "✦";
-      color: var(--accent-glow);
+      color: var(--accent);
       position: absolute;
       left: 0;
-      font-size: 1.3em;
+      font-size: 1.1em;
     }
 
     .btn {
       display: inline-block;
-      background: linear-gradient(45deg, #3b82f6, #8b5cf6, #00f0ff);
-      background-size: 300% 300%;
-      animation: gradientFlow 12s ease infinite;
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
       color: white;
-      padding: 1.4em 4em;
-      font-size: 1.6em;
+      padding: 1.2em 3.5em;
+      font-size: 1.5em;
       font-weight: 800;
       text-decoration: none;
-      border-radius: 70px;
-      box-shadow: 0 12px 40px rgba(59,130,246,0.5);
-      transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+      border-radius: 60px;
+      box-shadow: 0 10px 30px rgba(59,130,246,0.4);
+      transition: all 0.45s cubic-bezier(0.23,1,0.32,1);
       position: relative;
       overflow: hidden;
     }
 
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: linear-gradient(transparent, rgba(255,255,255,0.3), transparent);
+      transform: translateY(-100%) rotate(45deg);
+      transition: all 0.6s;
+    }
+
+    .btn:hover::before {
+      transform: translateY(100%) rotate(45deg);
+    }
+
     .btn:hover {
-      transform: translateY(-8px) scale(1.06);
-      box-shadow: 0 25px 60px rgba(59,130,246,0.8);
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 20px 50px rgba(59,130,246,0.7);
     }
 
     .note {
-      margin-top: 2.5em;
-      font-size: 1.2em;
+      margin-top: 2em;
+      font-size: 1.15em;
       color: var(--text-light);
     }
 
+    /* New: Payment Proofs Section CSS */
+    .proofs-section {
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #0a0a1a, #050505);
+      text-align: center;
+    }
+
+    .proofs-section h2 {
+      font-size: clamp(2.8em, 8vw, 4em);
+      margin-bottom: 1.5em;
+      color: var(--accent);
+      text-shadow: 0 0 30px rgba(59,130,246,0.4);
+    }
+
+    .proofs-section .intro-text {
+      max-width: 800px;
+      margin: 0 auto 3em;
+      font-size: 1.3em;
+      color: var(--text-light);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .proof-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(96, 165, 250, 0.2);
+    }
+
+    .proof-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--glow);
+    }
+
+    .proof-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .proof-caption {
+      padding: 1.2em;
+      font-size: 1.2em;
+      color: var(--text-light);
+      background: rgba(0,0,0,0.4);
+    }
+
+    @media (min-width: 640px) { 
+      .video-grid, .proof-grid { grid-template-columns: repeat(2, 1fr); } 
+    }
+
+    @media (min-width: 1024px) { 
+      .video-grid, .proof-grid { grid-template-columns: repeat(3, 1fr); } 
+      header { padding-top: 160px; }
+      .prev, .next {font-size: 24px; padding: 16px;}
+    }
+
+    /* Testimonials CSS (already there, keeping as is) */
     .testimonials-section {
-      padding: 120px 20px;
-      background: linear-gradient(to bottom, #0a0a20, #05050f);
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #0a0a1a, #050505);
     }
 
     .testimonials-section h2 {
       text-align: center;
-      font-size: clamp(3.2em, 9vw, 4.8em);
-      margin-bottom: 4em;
+      font-size: clamp(3em, 8vw, 4.2em);
+      margin-bottom: 3.5em;
       color: var(--accent);
-      text-shadow: 0 0 40px rgba(59,130,246,0.5);
+      text-shadow: 0 0 30px rgba(59,130,246,0.4);
     }
 
     .slideshow-container {
-      max-width: 1100px;
+      max-width: 1000px;
       position: relative;
       margin: auto;
-      border-radius: 24px;
+      border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow);
     }
@@ -309,80 +358,62 @@
       position: absolute;
       top: 50%;
       width: auto;
-      padding: 20px;
-      margin-top: -30px;
+      padding: 16px;
+      margin-top: -22px;
       color: white;
       font-weight: bold;
-      font-size: 28px;
-      transition: 0.5s ease;
-      border-radius: 0 12px 12px 0;
+      font-size: 24px;
+      transition: 0.6s ease;
+      border-radius: 0 8px 8px 0;
       user-select: none;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.4);
     }
 
     .next {
       right: 0;
-      border-radius: 12px 0 0 12px;
+      border-radius: 8px 0 0 8px;
     }
 
     .prev:hover, .next:hover {
-      background: rgba(59,130,246,0.8);
+      background: rgba(59,130,246,0.7);
     }
 
     .text {
       color: #fff;
-      font-size: 1.6em;
-      padding: 15px 25px;
+      font-size: 1.5em;
+      padding: 12px 20px;
       position: absolute;
-      bottom: 25px;
+      bottom: 20px;
       width: 100%;
       text-align: center;
-      background: rgba(0,0,0,0.6);
-      border-radius: 0 0 24px 24px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 0 0 20px 20px;
       font-weight: bold;
-      text-shadow: 0 0 10px rgba(0,0,0,0.8);
     }
 
     .dot {
       cursor: pointer;
-      height: 16px;
-      width: 16px;
-      margin: 0 8px;
-      background-color: #aaa;
+      height: 15px;
+      width: 15px;
+      margin: 0 6px;
+      background-color: #bbb;
       border-radius: 50%;
       display: inline-block;
-      transition: all 0.5s ease;
-      box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+      transition: background-color 0.6s ease;
     }
 
     .active, .dot:hover {
-      background-color: var(--neon);
-      box-shadow: 0 0 18px var(--neon), inset 0 0 8px #000;
+      background-color: var(--accent);
     }
 
     .fade {
       animation-name: fade;
-      animation-duration: 1.6s;
+      animation-duration: 1.5s;
     }
 
     @keyframes fade {
-      from {opacity: .3} 
+      from {opacity: .4} 
       to {opacity: 1}
-    }
-
-    @media (max-width: 768px) {
-      .prev, .next {font-size: 22px; padding: 14px;}
-      .text {font-size: 1.3em; padding: 12px;}
-      header { padding-top: 120px; }
-    }
-
-    @media (min-width: 640px) { 
-      .video-grid { grid-template-columns: repeat(2, 1fr); } 
-    }
-
-    @media (min-width: 1024px) { 
-      .video-grid { grid-template-columns: repeat(3, 1fr); } 
-      header { padding-top: 180px; }
     }
   </style>
 </head>
@@ -400,40 +431,27 @@
     <h2>Content Previews</h2>
     <div class="video-grid">
 
-      <div class="video-card">
-        <div class="video-wrapper">
-          <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" alt="OnlyFans Demo">
-          <div class="play-overlay">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <a href="https://t.me/dark4udemo_bot?start=BQADAQADwAkAAtuAeUUq8ifcNoSC_RYE" class="preview-btn">Only Fans Demo</a>
-      </div>
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQADwAkAAtuAeUUq8ifcNoSC_RYE" class="preview-btn">Only Fans Demo</a>
 
-      <div class="video-card">
-        <div class="video-wrapper">
-          <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" alt="Desi Demo">
-          <div class="play-overlay">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <a href="https://t.me/dark4udemo_bot?start=BQADAQAD7wkAAtuAeUVDYKsrKD4yzRYE" class="preview-btn">Desi Demo</a>
-      </div>
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQAD7wkAAtuAeUVDYKsrKD4yzRYE" class="preview-btn">Desi Demo</a>
 
-      <!-- Baaki video-cards bhi isi tarah daal do – sirf 2-3 example diye hain space bachane ke liye -->
-      <!-- Agar actual thumbnails hain to unke links daal dena, warna same screenshot use kar sakte ho -->
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQAD6QkAAtuAeUWEBm-UthLVUhYE" class="preview-btn">CP Demo</a>
 
-      <div class="video-card">
-        <div class="video-wrapper">
-          <img src="https://i.ibb.co/3m0g5HLP/Screenshot-20260309-175645-Telegram.png" alt="CP Demo">
-          <div class="play-overlay">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <a href="https://t.me/dark4udemo_bot?start=BQADAQAD6QkAAtuAeUWEBm-UthLVUhYE" class="preview-btn">CP Demo</a>
-      </div>
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQADFxcAAsl_gEXEWnPe4NrAzhYE" class="preview-btn">R@pe Demo</a>
 
-      <!-- Baaki previews isi pattern mein add kar dena -->
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQAD3AkAAtuAeUWcoWWBrjq8cBYE" class="preview-btn">Girl Demo</a>
+
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQAECgACt0GpRUsG4etfDqbpFgQ" class="preview-btn">Pregnant Demo</a>
+
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQADig0AAtqEmUVxejNh68B4QhYE" class="preview-btn">Blowjob Demo</a>
+
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQADDAcAAoqO2EWCzvXx_pTa6BYE" class="preview-btn">Animal Demo</a>
+
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQADiQ0AAqnzsEW1ojxY41ZKfRYE" class="preview-btn">Tango Demo</a>
+
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQADIhMAArdBoUWJrZRdviuXxRYE" class="preview-btn">Siteripe Demo</a>
+
+      <a href="https://t.me/dark4udemo_bot?start=BQADAQADHg8AArdBoUXGhgIwbWNiXRYE" class="preview-btn">Desi Webseries Demo</a>
 
     </div>
   </section>
@@ -442,9 +460,8 @@
     <h2>Choose Your Plan</h2>
     <div class="price-card">
       <div class="card">
-        <h3>Lifetime Premium</h3>
-        <p class="price">₹80</p>
-        <p style="font-size:1.3em; color:var(--text-light); margin:-1em 0 2em;">One-time Payment – Lifetime Access</p>
+        <h3>Life Time Premium</h3>
+        <p class="price">₹80 / Life Time</p>
         <ul class="features">
           <li>Unlimited premium video access</li>
           <li>New exclusive drops every week</li>
@@ -453,55 +470,158 @@
           <li>HD / 4K quality + no ads</li>
           <li>Priority support & updates</li>
         </ul>
-        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u21</a>
+        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u12</a>
         <p class="note">One-click Telegram join – secure & instant setup.</p>
       </div>
     </div>
+  </section>
+
+  <!-- New Payment Proofs Section -->
+  <section class="proofs-section">
+    <h2>Payment Proofs – Real Members Joined!</h2>
+    <p class="intro-text">
+      देखो भाई, ये 100% real payment screenshots हैं। सबने ₹80 देकर lifetime access लिया है। Fake नहीं, genuine proofs। तू भी join कर ले, doubt हो तो स्क्रीनशॉट मांग लेना!
+    </p>
+    
+    <div class="proof-grid">
+
+      <!-- Replace these src with your actual uploaded image links -->
+      <div class="proof-card">
+        <img src="https://i.ibb.co/EXAMPLE/proof1.jpg" alt="Payment Proof 1">
+        <div class="proof-caption">15 March 2026 – PhonePe ₹80 Received</div>
+      </div>
+
+      <div class="proof-card">
+        <img src="https://i.ibb.co/EXAMPLE/proof2.png" alt="Payment Proof 2">
+        <div class="proof-caption">16 March 2026 – Google Pay Success</div>
+      </div>
+
+      <div class="proof-card">
+        <img src="https://i.ibb.co/EXAMPLE/proof3.jpg" alt="Payment Proof 3">
+        <div class="proof-caption">17 March 2026 – Instant Access Given</div>
+      </div>
+
+      <div class="proof-card">
+        <img src="https://i.ibb.co/EXAMPLE/proof4.jpg" alt="Payment Proof 4">
+        <div class="proof-caption">18 March 2026 – UPI Verified</div>
+      </div>
+
+      <!-- और proofs add कर सकते हो, 4-8 काफी अच्छे लगते हैं -->
+
+    </div>
+
+    <p class="note" style="margin-top: 4em;">
+      हर payment @dark4u21 को आती है और bot से तुरंत content unlock हो जाता है। Trusted service!
+    </p>
   </section>
 
   <section class="testimonials-section">
     <h2>Exclusive Content Previews</h2>
     <div class="slideshow-container">
 
+      <!-- Slide 1 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" style="width:100%" alt="Bro Sis">
+        <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" style="width:100%" alt="Content Preview 1">
         <div class="text">Bro Sis</div>
       </div>
 
+      <!-- Slide 2 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" style="width:100%" alt="CP">
+        <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" style="width:100%" alt="Content Preview 2">
         <div class="text">CP</div>
       </div>
 
-      <!-- Baaki slides same as your original code – copy paste kar lena -->
+      <!-- Slide 3 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/3m0g5HLP/Screenshot-20260309-175645-Telegram.png" style="width:100%" alt="Content Preview 3">
+        <div class="text">Brazzers Collection</div>
+      </div>
 
+      <!-- Slide 4 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/HDG55xs8/Screenshot-20260309-175715-Telegram.png" style="width:100%" alt="Content Preview 4">
+        <div class="text">Goddess Ana</div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" style="width:100%" alt="Content Preview 5">
+        <div class="text">R@pe</div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" style="width:100%" alt="Content Preview 6">
+        <div class="text">Girls Collection</div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" style="width:100%" alt="Content Preview 7">
+        <div class="text">Spy Leaked</div>
+      </div>
+
+      <!-- Slide 8 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" style="width:100%" alt="Content Preview 8">
+        <div class="text">Desi Uncut</div>
+      </div>
+
+      <!-- Slide 9 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" style="width:100%" alt="Content Preview 9">
+        <div class="text">Blowjob</div>
+      </div>
+
+      <!-- Slide 10 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" style="width:100%" alt="Content Preview 10">
+        <div class="text">Desi Webseries</div>
+      </div>
+
+      <!-- Slide 11 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" style="width:100%" alt="Content Preview 11">
+        <div class="text">Pregnant</div>
+      </div>
+
+      <!-- Slide 12 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" style="width:100%" alt="Content Preview 12">
+        <div class="text">Animal</div>
+      </div>
+
+      <!-- Next & previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
 
+    <!-- Dots below slider -->
     <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
       <span class="dot" onclick="currentSlide(4)"></span>
-      <!-- Agar slides zyada hain to dots bhi badha dena -->
+      <!-- अगर slides ज्यादा हैं तो dots भी बढ़ा सकते हो, लेकिन अभी 4 काफी -->
     </div>
   </section>
 
   <script>
+    // Scroll reveal for cards
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.card').forEach(card => {
       observer.observe(card);
     });
 
+    // Slideshow JavaScript
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -530,7 +650,7 @@
       }
       
       slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
+      if (dots[slideIndex-1]) dots[slideIndex-1].className += " active";
     }
   </script>
 
