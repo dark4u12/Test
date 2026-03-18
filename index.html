@@ -260,7 +260,6 @@
       color: var(--text-light);
     }
 
-    /* New: Payment Proofs Section CSS */
     .proofs-section {
       padding: 100px 20px;
       background: linear-gradient(to bottom, #0a0a1a, #050505);
@@ -275,73 +274,15 @@
     }
 
     .proofs-section .intro-text {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto 3em;
-      font-size: 1.3em;
+      font-size: 1.35em;
+      line-height: 1.6;
       color: var(--text-light);
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2em;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .proof-card {
-      background: var(--card-bg);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: all 0.4s ease;
-      border: 1px solid rgba(96, 165, 250, 0.2);
-    }
-
-    .proof-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--glow);
-    }
-
-    .proof-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .proof-caption {
-      padding: 1.2em;
-      font-size: 1.2em;
-      color: var(--text-light);
-      background: rgba(0,0,0,0.4);
-    }
-
-    @media (min-width: 640px) { 
-      .video-grid, .proof-grid { grid-template-columns: repeat(2, 1fr); } 
-    }
-
-    @media (min-width: 1024px) { 
-      .video-grid, .proof-grid { grid-template-columns: repeat(3, 1fr); } 
-      header { padding-top: 160px; }
-      .prev, .next {font-size: 24px; padding: 16px;}
-    }
-
-    /* Testimonials CSS (already there, keeping as is) */
-    .testimonials-section {
-      padding: 100px 20px;
-      background: linear-gradient(to bottom, #0a0a1a, #050505);
-    }
-
-    .testimonials-section h2 {
-      text-align: center;
-      font-size: clamp(3em, 8vw, 4.2em);
-      margin-bottom: 3.5em;
-      color: var(--accent);
-      text-shadow: 0 0 30px rgba(59,130,246,0.4);
     }
 
     .slideshow-container {
-      max-width: 1000px;
+      max-width: 900px;
       position: relative;
       margin: auto;
       border-radius: 20px;
@@ -380,7 +321,7 @@
 
     .text {
       color: #fff;
-      font-size: 1.5em;
+      font-size: 1.3em;
       padding: 12px 20px;
       position: absolute;
       bottom: 20px;
@@ -414,6 +355,15 @@
     @keyframes fade {
       from {opacity: .4} 
       to {opacity: 1}
+    }
+
+    @media (min-width: 640px) { 
+      .video-grid { grid-template-columns: repeat(2, 1fr); } 
+    }
+
+    @media (min-width: 1024px) { 
+      .video-grid { grid-template-columns: repeat(3, 1fr); } 
+      header { padding-top: 160px; }
     }
   </style>
 </head>
@@ -470,48 +420,71 @@
           <li>HD / 4K quality + no ads</li>
           <li>Priority support & updates</li>
         </ul>
-        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u12</a>
+        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u21</a>
         <p class="note">One-click Telegram join – secure & instant setup.</p>
       </div>
     </div>
   </section>
 
-  <!-- New Payment Proofs Section -->
   <section class="proofs-section">
-    <h2>Payment Proofs – Real Members Joined!</h2>
-    <p class="intro-text">
-      देखो भाई, ये 100% real payment screenshots हैं। सबने ₹80 देकर lifetime access लिया है। Fake नहीं, genuine proofs। तू भी join कर ले, doubt हो तो स्क्रीनशॉट मांग लेना!
-    </p>
+    <h2>Real Payment Proofs – Log Members Already Joined! 🔥</h2>
     
-    <div class="proof-grid">
+    <p class="intro-text">
+      भाई देख ले, ये 100% असली payment screenshots हैं – कोई fake, कोई editing नहीं। <br>
+      सबने सिर्फ ₹80 देकर lifetime premium access ले लिया। <br><br>
+      
+      नए content हर हफ्ते drop हो रहे हैं, bot से direct HD/4K मिल रहा है, zero wait, zero ads। <br>
+      जो आज join कर लेगा, वो कल से ही unlimited माल देखेगा – जो सोच रहा है "कल देख लूंगा", वो कल regret करेगा। <br><br>
+      
+      Doubt है? तो इन proofs को ध्यान से देख, date, time, amount सब clear है। <br>
+      और चाहिए proof? @dark4u21 पे personally मैसेज कर लेना, और स्क्रीनशॉट मांग लेना – हमेशा ready रहते हैं दिखाने के लिए। <br><br>
+      
+      <strong>₹80 में lifetime – इतना सस्ता कभी नहीं मिलेगा। Stock limited feel हो रहा है, जल्दी कर ले!</strong>
+    </p>
 
-      <!-- Replace these src with your actual uploaded image links -->
-      <div class="proof-card">
-        <img src="https://i.ibb.co/21wJHW8f/IMG-20260318-100837-029.jpg" alt="Payment Proof 1">
-        <div class="proof-caption">18 March 2026 – PhonePe ₹150 Received</div>
+    <div class="slideshow-container">
+
+      <!-- Slide 1 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/21wJHW8f/IMG-20260318-100837-029.jpg" style="width:100%" alt="Payment Proof 1">
+        <div class="text">18 March 2026 – PhonePe ₹150 Received</div>
       </div>
 
-      <div class="proof-card">
-        <img src="https://i.ibb.co/217dd8F8/IMG-20260318-100837-103.jpg" alt="Payment Proof 2">
-        <div class="proof-caption">12 March 2026 – Phone Pay Success</div>
+      <!-- Slide 2 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/217dd8F8/IMG-20260318-100837-103.jpg" style="width:100%" alt="Payment Proof 2">
+        <div class="text">12 March 2026 – PhonePe Success</div>
       </div>
 
-      <div class="proof-card">
-        <img src="https://i.ibb.co/yM2qj7Z/IMG-20260318-100837-125.jpg" alt="Payment Proof 3">
-        <div class="proof-caption">17 March 2026 – Instant Access Given</div>
+      <!-- Slide 3 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/yM2qj7Z/IMG-20260318-100837-125.jpg" style="width:100%" alt="Payment Proof 3">
+        <div class="text">17 March 2026 – Instant Access Given</div>
       </div>
 
-      <div class="proof-card">
-        <img src="https://i.ibb.co/wNhgVycV/Screenshot-20260318-101424-Telegram.png" alt="Payment Proof 4">
-        <div class="proof-caption">18 March 2026 – UPI Verified</div>
+      <!-- Slide 4 -->
+      <div class="mySlides fade">
+        <img src="https://i.ibb.co/wNhgVycV/Screenshot-20260318-101424-Telegram.png" style="width:100%" alt="Payment Proof 4">
+        <div class="text">18 March 2026 – UPI Verified @dark4u21</div>
       </div>
 
-      <!-- और proofs add कर सकते हो, 4-8 काफी अच्छे लगते हैं -->
+      <!-- Next & previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
 
+    <!-- Dots below slider -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
-    <p class="note" style="margin-top: 4em;">
-      हर payment @dark4u21 को आती है और bot से तुरंत content unlock हो जाता है। Trusted service!
+    <p class="note" style="margin-top: 4em; font-size: 1.25em; text-align: center; color: #a0a0ff;">
+      हर payment @dark4u21 को आती है → bot से तुरंत full access unlock → बस 1 मिनट का काम। <br>
+      Trusted since day 1 – हजारों भाई already enjoy कर रहे हैं। तू कब join कर रहा है? 😈
     </p>
   </section>
 
@@ -603,7 +576,6 @@
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
       <span class="dot" onclick="currentSlide(4)"></span>
-      <!-- अगर slides ज्यादा हैं तो dots भी बढ़ा सकते हो, लेकिन अभी 4 काफी -->
     </div>
   </section>
 
@@ -621,7 +593,7 @@
       observer.observe(card);
     });
 
-    // Slideshow JavaScript
+    // Slideshow JavaScript (used by both sliders)
     let slideIndex = 1;
     showSlides(slideIndex);
 
