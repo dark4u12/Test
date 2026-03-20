@@ -4,15 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dark4U Premium – Exclusive Access</title>
-<!-- Tailwind CSS CDN (required for daisyUI) -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- daisyUI CDN - latest stable version -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5/dist/full.min.css" rel="stylesheet" type="text/css" />
-
-<!-- Optional: Agar sirf light/dark theme chahiye to themes.css use kar sakte ho (smaller size) -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" /> -->
-
   <style>
     :root {
       --bg: #050505;
@@ -115,6 +106,46 @@
       gap: 2.5em;
       max-width: 1300px;
       margin: 0 auto;
+    }
+
+    .video-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+    }
+
+    video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .video-card:hover video {
+      transform: scale(1.08);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .video-card:hover .overlay {
+      opacity: 1;
     }
 
     .preview-btn {
@@ -229,15 +260,15 @@
       color: var(--text-light);
     }
 
-    .slider-section {
+    .testimonials-section {
       padding: 100px 20px;
       background: linear-gradient(to bottom, #0a0a1a, #050505);
-      text-align: center;
     }
 
-    .slider-section h2 {
+    .testimonials-section h2 {
+      text-align: center;
       font-size: clamp(3em, 8vw, 4.2em);
-      margin-bottom: 2em;
+      margin-bottom: 3.5em;
       color: var(--accent);
       text-shadow: 0 0 30px rgba(59,130,246,0.4);
     }
@@ -245,7 +276,7 @@
     .slideshow-container {
       max-width: 1000px;
       position: relative;
-      margin: 0 auto 2em;
+      margin: auto;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -291,10 +322,6 @@
       background: rgba(0,0,0,0.5);
       border-radius: 0 0 20px 20px;
       font-weight: bold;
-    }
-
-    .dot-container {
-      text-align: center;
     }
 
     .dot {
@@ -348,19 +375,34 @@
   </header>
 
   <section class="demo-section">
-    <h2>Content Previews (Demo Links)</h2>
+    <h2>Content Previews</h2>
     <div class="video-grid">
+
       <a href="https://t.me/dark4udemo_bot?start=BQADAQADwAkAAtuAeUUq8ifcNoSC_RYE" class="preview-btn">Only Fans Demo</a>
+
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD7wkAAtuAeUVDYKsrKD4yzRYE" class="preview-btn">Desi Demo</a>
+
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD6QkAAtuAeUWEBm-UthLVUhYE" class="preview-btn">CP Demo</a>
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADFxcAAsl_gEXEWnPe4NrAzhYE" class="preview-btn">R@pe Demo</a>
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADFxcAAsl_gEXEWnPe4NrAzhYE" class="preview-btn">R@pe Demo</a>
       <a href="https://t.me/dark4udemo_bot?start=BQADAQAD3AkAAtuAeUWcoWWBrjq8cBYE" class="preview-btn">Girl Demo</a>
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQAECgACt0GpRUsG4etfDqbpFgQ" class="preview-btn">Pregnant Demo</a>
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADig0AAtqEmUVxejNh68B4QhYE" class="preview-btn">Blowjob Demo</a>
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADDAcAAoqO2EWCzvXx_pTa6BYE" class="preview-btn">Animal Demo</a>
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADiQ0AAqnzsEW1ojxY41ZKfRYE" class="preview-btn">Tango Demo</a>
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADIhMAArdBoUWJrZRdviuXxRYE" class="preview-btn">Siteripe Demo</a>
-      <a href="https://t.me/dark4udemo_bot?start=BQADAQADHg8AArdBoUXGhgIwbWNiXRYE" class="preview-btn">Desi Webseries Demo</a>
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQAECgACt0GpRUsG4etfDqbpFgQ" class="preview-btn">Pregnant Demo</a>
+
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADig0AAtqEmUVxejNh68B4QhYE" class="preview-btn">Blowjob Demo</a>
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADDAcAAoqO2EWCzvXx_pTa6BYE" class="preview-btn">Animal Demo</a>
+
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADiQ0AAqnzsEW1ojxY41ZKfRYE" class="preview-btn">Tango Demo</a>
+
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADIhMAArdBoUWJrZRdviuXxRYE" class="preview-btn">Siteripe Demo</a>
+
+<a href="https://t.me/dark4udemo_bot?start=BQADAQADHg8AArdBoUXGhgIwbWNiXRYE" class="preview-btn">Desi Webseries Demo</a>
+
+
     </div>
   </section>
 
@@ -378,196 +420,166 @@
           <li>HD / 4K quality + no ads</li>
           <li>Priority support & updates</li>
         </ul>
-        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u21</a>
+        <a href="https://t.me/dark4u21" class="btn">Join Now @dark4u12</a>
         <p class="note">One-click Telegram join – secure & instant setup.</p>
       </div>
     </div>
+
+<!-- Join Now के नीचे यह वाला डाल सकते हो -->
+
+<a 
+  href="https://t.me/dark4u21/123" 
+  target="_blank"
+  class="preview-btn"
+  style="background: linear-gradient(90deg, #10b981, #059669); margin-top: 1.4em;"
+>
+  Real Payment Proofs
+</a>
+
   </section>
 
-  <section class="slider-section" id="proof-slider-section">
-    <h2>Real Payment Proofs (Slide Horizontally)</h2>
-    <div class="slideshow-container" id="proofSlider">
-      <!-- Payment proof slides – real links daal dena -->
-      <div class="mySlides fade">
-        <img src="https://i.ibb.co/placeholder/payment-proof-1.jpg" style="width:100%" alt="Proof 1">
-        <div class="text">UPI ₹80 – 10 March 2026</div>
-      </div>
-      <div class="mySlides fade">
-        <img src="https://i.ibb.co/placeholder/success-msg-2.png" style="width:100%" alt="Proof 2">
-        <div class="text">Telegram Thank You – Access Received</div>
-      </div>
-      <div class="mySlides fade">
-        <img src="https://i.ibb.co/placeholder/proof-3.jpg" style="width:100%" alt="Proof 3">
-        <div class="text">PhonePe Success – Instant Delivery</div>
-      </div>
-      <!-- Add more as needed -->
+  <section class="testimonials-section">
+    <h2>Exclusive Content Previews</h2>
+    <div class="slideshow-container">
 
-      <a class="prev" onclick="plusSlides('proofSlider', -1)">&#10094;</a>
-      <a class="next" onclick="plusSlides('proofSlider', 1)">&#10095;</a>
-    </div>
-    <div class="dot-container" id="proofDots">
-      <span class="dot" onclick="currentSlide('proofSlider', 1)"></span>
-      <span class="dot" onclick="currentSlide('proofSlider', 2)"></span>
-      <span class="dot" onclick="currentSlide('proofSlider', 3)"></span>
-      <!-- Extra dots add kar dena agar zyada slides hain -->
-    </div>
-  </section>
-
-  <section class="slider-section" id="content-slider-section">
-    <h2>Exclusive Content Previews (Slide Horizontally)</h2>
-    <div class="slideshow-container" id="contentSlider">
+      <!-- Slide 1 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" style="width:100%" alt="Bro Sis">
+        <img src="https://i.ibb.co/chJMfk5V/Screenshot-20260309-175536-Telegram.png" style="width:100%" alt="Content Preview 1">
         <div class="text">Bro Sis</div>
       </div>
+
+      <!-- Slide 2 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" style="width:100%" alt="CP">
+        <img src="https://i.ibb.co/8LZMzYxQ/Screenshot-20260309-175556-Telegram.png" style="width:100%" alt="Content Preview 2">
         <div class="text">CP</div>
       </div>
+
+      <!-- Slide 3 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/3m0g5HLP/Screenshot-20260309-175645-Telegram.png" style="width:100%" alt="Brazzers">
+        <img src="https://i.ibb.co/3m0g5HLP/Screenshot-20260309-175645-Telegram.png" style="width:100%" alt="Content Preview 3">
         <div class="text">Brazzers Collection</div>
       </div>
+
+      <!-- Slide 4 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/HDG55xs8/Screenshot-20260309-175715-Telegram.png" style="width:100%" alt="Goddess Ana">
+        <img src="https://i.ibb.co/HDG55xs8/Screenshot-20260309-175715-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Goddess Ana</div>
       </div>
+ <!-- Slide 5 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" style="width:100%" alt="R@pe">
+        <img src="https://i.ibb.co/4Z7PH5Sb/Screenshot-20260309-180003-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">R@pe</div>
       </div>
+
+ <!-- Slide 6 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" style="width:100%" alt="Girls">
+        <img src="https://i.ibb.co/PzDC0FgY/Screenshot-20260309-180224-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Girls Collection</div>
       </div>
+
+
+ <!-- Slide 7 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" style="width:100%" alt="Spy Leaked">
+        <img src="https://i.ibb.co/Q3b3L4bc/Screenshot-20260309-180258-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Spy Leaked</div>
       </div>
+
+<!-- Slide 8 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" style="width:100%" alt="Desi Uncut">
+        <img src="https://i.ibb.co/S4rqgL9p/Screenshot-20260311-213110-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Desi Uncut</div>
       </div>
+
+
+<!-- Slide 9 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" style="width:100%" alt="Blowjob">
+        <img src="https://i.ibb.co/7NjjKkQ3/Screenshot-20260312-124803-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Blowjob</div>
       </div>
+
+<!-- Slide 10 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" style="width:100%" alt="Desi Webseries">
+        <img src="https://i.ibb.co/8D3nbT21/Screenshot-20260313-194958-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Desi Webseries</div>
       </div>
+
+
+<!-- Slide 11 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" style="width:100%" alt="Pregnant">
+        <img src="https://i.ibb.co/8g7wBC5B/Screenshot-20260314-093349-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Pregnant</div>
       </div>
+
+<!-- Slide 12 -->
       <div class="mySlides fade">
-        <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" style="width:100%" alt="Animal">
+        <img src="https://i.ibb.co/cSfB25Vf/Screenshot-20260318-085642-Telegram.png" style="width:100%" alt="Content Preview 4">
         <div class="text">Animal</div>
       </div>
 
-      <a class="prev" onclick="plusSlides('contentSlider', -1)">&#10094;</a>
-      <a class="next" onclick="plusSlides('contentSlider', 1)">&#10095;</a>
+
+      <!-- Next & previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <div class="dot-container" id="contentDots">
-      <span class="dot" onclick="currentSlide('contentSlider', 1)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 2)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 3)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 4)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 5)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 6)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 7)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 8)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 9)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 10)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 11)"></span>
-      <span class="dot" onclick="currentSlide('contentSlider', 12)"></span>
+    <br>
+
+    <!-- Dots below slider -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
   </section>
 
-<div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide4" class="btn btn-circle">❮</a>
-      <a href="#slide2" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide2" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide1" class="btn btn-circle">❮</a>
-      <a href="#slide3" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide3" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide2" class="btn btn-circle">❮</a>
-      <a href="#slide4" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide4" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide3" class="btn btn-circle">❮</a>
-      <a href="#slide1" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-</div>
-
   <script>
-    // Card animation (pricing)
+    // Scroll reveal for cards
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.card').forEach(card => observer.observe(card));
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
 
-    // Slider logic for both sliders
-    const sliders = {
-      proofSlider: { index: 1, slides: document.querySelectorAll('#proofSlider .mySlides'), dots: document.querySelectorAll('#proofDots .dot') },
-      contentSlider: { index: 1, slides: document.querySelectorAll('#contentSlider .mySlides'), dots: document.querySelectorAll('#contentDots .dot') }
-    };
+    // Slideshow JavaScript (automatic scrolling band kar diya)
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-    function showSlide(sliderId) {
-      const s = sliders[sliderId];
-      if (s.index > s.slides.length) s.index = 1;
-      if (s.index < 1) s.index = s.slides.length;
-
-      s.slides.forEach(slide => slide.style.display = "none");
-      s.dots.forEach(dot => dot.className = dot.className.replace(" active", ""));
-
-      s.slides[s.index - 1].style.display = "block";
-      s.dots[s.index - 1].className += " active";
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
     }
 
-    function plusSlides(sliderId, n) {
-      sliders[sliderId].index += n;
-      showSlide(sliderId);
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
     }
 
-    function currentSlide(sliderId, n) {
-      sliders[sliderId].index = n;
-      showSlide(sliderId);
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
     }
 
-    // Initialize both
-    showSlide('proofSlider');
-    showSlide('contentSlider');
-
-    // Global functions for onclick
-    window.plusSlides = plusSlides;
-    window.currentSlide = currentSlide;
+    // Yeh line comment out / hata diya gaya hai → ab auto nahi chalega
+    // setInterval(() => { plusSlides(1); }, 4000);
   </script>
 
 </body>
